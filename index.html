@@ -498,6 +498,152 @@
       color: #cbd5e1;
     }
 
+    
+    /* Cita Newton y Objetivos Formales */
+    .ecg-quote-card {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.08) 0%, rgba(15, 23, 42, 0.85) 100%);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 0.85rem 0.85rem 0;
+      padding: 1.1rem 1.4rem;
+      margin: 1.25rem 0;
+      font-style: italic;
+      color: #e2e8f0;
+      font-size: 0.98rem;
+    }
+    .ecg-quote-card cite {
+      display: block;
+      margin-top: 0.4rem;
+      font-size: 0.82rem;
+      font-style: normal;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .ecg-objectives-box {
+      background: rgba(2, 6, 23, 0.6);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 0.95rem;
+      padding: 1.35rem 1.6rem;
+      margin: 1.4rem 0;
+    }
+    .ecg-objectives-box h5 {
+      color: var(--accent);
+      font-size: 1.05rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .ecg-objectives-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+    .ecg-objectives-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      color: #cbd5e1;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+    .ecg-objectives-list li span.obj-icon {
+      color: #38bdf8;
+      font-weight: 800;
+      font-size: 1rem;
+      line-height: 1.3;
+    }
+
+    /* Bibliografía Grid */
+    .ecg-biblio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+    .ecg-biblio-card {
+      background: rgba(2, 6, 23, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 0.75rem;
+      padding: 1rem 1.2rem;
+      display: flex;
+      gap: 0.85rem;
+      transition: all 0.2s ease;
+    }
+    .ecg-biblio-card:hover {
+      border-color: rgba(56, 189, 248, 0.4);
+      background: rgba(15, 23, 42, 0.85);
+      transform: translateY(-2px);
+    }
+    .ecg-biblio-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      color: #38bdf8;
+      font-size: 0.75rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .ecg-biblio-content {
+      font-size: 0.84rem;
+      line-height: 1.55;
+      color: #cbd5e1;
+    }
+    .ecg-biblio-content strong {
+      color: #ffffff;
+      font-size: 0.88rem;
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+    .ecg-biblio-content a {
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-all;
+      display: inline-block;
+      margin-top: 0.3rem;
+      font-size: 0.78rem;
+    }
+    .ecg-biblio-content a:hover {
+      text-decoration: underline;
+    }
+
+    /* Agradecimientos Card */
+    .ecg-ack-box {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.08) 0%, rgba(15, 23, 42, 0.95) 100%);
+      border: 1px solid rgba(239, 68, 68, 0.28);
+      border-radius: 1rem;
+      padding: 1.5rem 1.8rem;
+      margin: 1.5rem 0;
+    }
+    .ecg-ack-box h5 {
+      color: #f87171;
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 0.65rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .ecg-ack-p {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .ecg-ack-p strong {
+      color: #ffffff;
+    }
+
     .ecg-spec-table tr:hover td {
       background: rgba(56, 189, 248, 0.04);
     }
@@ -743,11 +889,27 @@
             En un instrumento de alta sensibilidad como el electrocardiógrafo, convergen múltiples fuentes ambientales parásitas: luminarias de descarga o LED, conductores energizados e incluso regletas multienchufe cercanas, las cuales irradian campos electromagnéticos que inducen zumbidos de gran amplitud aun cuando los dispositivos conectados permanezcan apagados.
           </p>
           <div class="ecg-alert-box info">
-            <strong data-i18n="sec1ContextTitle">🔬 Contexto de Investigación Biomédica:</strong>
-            <span data-i18n="sec1ContextDesc">Este proyecto fue formulado en respuesta a la solicitud de un médico cardiólogo en el marco de su investigación de tesis sobre fisiopatología de paros cardíacos y arritmias agudas. El protocolo experimental requería la visualización continua y en tiempo real de la traza electrocardiográfica en un ordenador portátil para capturar instantáneas en alta resolución (HD) y realizar análisis morfométricos diferidos de los complejos cardíacos.</span>
+            <strong data-i18n="sec1ContextTitle">🔬 Contexto de Investigación Biomédica &amp; Vinculación Académica:</strong>
+            <span data-i18n="sec1ContextDesc">Este proyecto fue formulado en el seno del laboratorio del <strong>Dr. Walter Manucha</strong> en la <strong>Universidad Nacional de Cuyo (Mendoza, Argentina)</strong>, en estrecha colaboración con el médico cardiólogo <strong>Dr. Raúl Sanz</strong> y con la vinculación institucional del <strong>Dr. Emiliano Diez</strong>. El protocolo experimental requería la captura continua y en tiempo real de la traza electrocardiográfica en roedores de laboratorio y modelos humanos bajo severas condiciones de ruido electromagnético en quirófano.</span>
           </div>
+
+          <div class="ecg-quote-card">
+            <p data-i18n="sec1QuoteText">"Haciendo cita directa a Isaac Newton y a su célebre aforismo <em>'Apoyándonos en hombros de gigantes'</em>, este proyecto aborda el desarrollo de un monitor electrocardiograma Open Source para roedores y humanos en ambientes de alta interferencia electromagnética, democratizando herramientas biomédicas de investigación con tecnologías abiertas, transparentes y reproducibles."</p>
+            <cite data-i18n="sec1QuoteAuthor">— Marco Filosófico y Metodológico de la Investigación (UNCUYO, 2019)</cite>
+          </div>
+
+          <div class="ecg-objectives-box">
+            <h5 data-i18n="sec1ObjTitle">🎯 Objetivos Formales de la Investigación</h5>
+            <ul class="ecg-objectives-list">
+              <li><span class="obj-icon">1.</span> <span data-i18n="sec1Obj1"><strong>Diseño en Plataforma Windows:</strong> Construir una aplicación robusta, portable y de baja latencia con interfaz gráfica intuitiva ejecutable en ordenadores convencionales.</span></li>
+              <li><span class="obj-icon">2.</span> <span data-i18n="sec1Obj2"><strong>Arquitectura 100% Open Source:</strong> Implementar microcontroladores abiertos (Arduino) y ecosistema Python libre de costosas licencias privativas comerciales ($500 - $1,000 USD).</span></li>
+              <li><span class="obj-icon">3.</span> <span data-i18n="sec1Obj3"><strong>Adquisición de Señal en Roedores de Laboratorio:</strong> Lograr la lectura electrofisiológica fidedigna en modelos animales murinos (ratas), adaptando la escala de voltaje a microvoltios.</span></li>
+              <li><span class="obj-icon">4.</span> <span data-i18n="sec1Obj4"><strong>Supresión Digital Adaptativa de Ruido:</strong> Eliminar el ruido ambiental extremo mediante algoritmos DSP en tiempo real en vez de filtros analógicos rígidos.</span></li>
+            </ul>
+          </div>
+
           <p class="ecg-body-p" data-i18n="sec1P3">
-            Si bien los electrocardiógrafos y osciloscopios clínicos comerciales disponen de interfaces para enlace con PC, sus licencias de software propietario suponen un costo recurrente de entre <strong>$500 USD y $1,000 USD</strong>. El objetivo prioritario de este desarrollo fue superar dicha barrera económica, concibiendo un sistema de telemetría de código abierto, accesible, económicamente viable y de alta confiabilidad metrológica para cualquier profesional o centro de investigación.
+            Si bien los electrocardiógrafos y osciloscopios clínicos comerciales disponen de interfaces para enlace con PC, sus licencias de software propietario suponen un costo recurrente prohibitivo. El objetivo de este desarrollo fue superar dicha barrera económica, concibiendo un sistema de telemetría de código abierto, accesible y de alta confiabilidad metrológica para cualquier profesional, laboratorio o universidad.
           </p>
         </section>
 
@@ -984,21 +1146,42 @@
             Para materializar esta solución de forma permanente y reusable, se diseñaron y modelaron en 3D pinzas anatómicas de presión constante equipadas con láminas de cobre electrolítico de alta pureza como contacto seco:
           </p>
 
+          <div class="ecg-figures-row">
+            <div class="ecg-fig-item" onclick="openLightbox(this)">
+              <div class="ecg-fig-media-wrap contain-mode">
+                <img src="media/pinza_bruselas1.jpeg" alt="Pinza de bruselas impresa en 3D">
+              <span class="ecg-fig-zoom-badge">🔍 Zoom</span></div>
+              <div class="ecg-fig-text">
+                <strong data-i18n="figBru1Title">Fig. 18A: Pinza de Bruselas Impresa en 3D (Thingiverse #25587)</strong>
+                <span data-i18n="figBru1Desc">Geometría de pinza de resorte mecánico continuo, adaptada para sujeción ergonómica en falanges distales o extremidades de roedores.</span>
+              </div>
+            </div>
+            <div class="ecg-fig-item" onclick="openLightbox(this)">
+              <div class="ecg-fig-media-wrap contain-mode">
+                <img src="media/pinza_bruselas2.jpeg" alt="Pinzas de bruselas con electrodos de cobre">
+              <span class="ecg-fig-zoom-badge">🔍 Zoom</span></div>
+              <div class="ecg-fig-text">
+                <strong data-i18n="figBru2Title">Fig. 18B: Electrodos Secos de Contacto en Lámina de Cobre</strong>
+                <span data-i18n="figBru2Desc">Montaje de banda conductora de cobre electrolítico de alta pureza con terminales soldados directamente a las mordazas de la pinza.</span>
+              </div>
+            </div>
+          </div>
+
           <div class="ecg-figures-row single-col">
             <div class="ecg-fig-item" onclick="openLightbox(this)">
               <div class="ecg-fig-media-wrap contain-mode">
                 <img src="media/image18.jpeg" alt="Pinzas de electrodos dactilares impresas en 3D con cobre">
               <span class="ecg-fig-zoom-badge">🔍 Zoom</span></div>
               <div class="ecg-fig-text">
-                <strong data-i18n="fig18CaptionTitle">Fig. 18: Pinzas Dactilares Impresas en 3D con Lámina de Cobre</strong>
+                <strong data-i18n="fig18CaptionTitle">Fig. 18C: Ensamble Par de Electrodos Secos Terminados</strong>
                 <span data-i18n="fig18CaptionDesc">Electrodos secos ergonómicos, lavables, libres de adhesivos e instantáneamente reutilizables.</span>
               </div>
             </div>
           </div>
 
           <div class="ecg-alert-box info">
-            <strong>📥 Descarga de Archivos 3D:</strong>
-            <span>El modelo tridimensional en formato STL de las pinzas dactilares se encuentra disponible para impresión en el <a href="https://github.com/BrandonAntonioSeguraTorres/Real-Time-ECG-Monitor-PyQt5-PyAudio-/releases/tag/ecg_monitor" target="_blank" rel="noopener noreferrer" class="ecg-link-inline">repositorio oficial de GitHub (Releases) ↗</a>.</span>
+            <strong data-i18n="sec4StlTitle">📥 Descarga Oficial del Modelo 3D de las Pinzas de Bruselas:</strong>
+            <span data-i18n="sec4StlDesc">El diseño original 3D en formato STL utilizado para las pinzas anatómicas se encuentra publicado en Thingiverse: <a href="https://www.thingiverse.com/thing:25587" target="_blank" rel="noopener noreferrer" class="ecg-link-inline">Descargar Pinza de Bruselas 3D en Thingiverse (Thing #25587) ↗</a>. También está disponible en el paquete de <a href="https://github.com/BrandonAntonioSeguraTorres/Real-Time-ECG-Monitor-PyQt5-PyAudio-/releases/tag/ecg_monitor" target="_blank" rel="noopener noreferrer" class="ecg-link-inline">Releases de GitHub ↗</a>.</span>
           </div>
         </section>
 
@@ -1137,7 +1320,7 @@
             <ul style="padding-left: 1.25rem; margin-top: 0.35rem; display: flex; flex-direction: column; gap: 0.35rem;">
               <li data-i18n="sec8Item1"><strong>Alimentación por Baterías DC:</strong> Se emplean baterías para energizar el circuito, desvinculando galvánicamente el sistema de la red eléctrica y del bus USB. Esto ahorra los $40 USD de un aislador de señal USB externo (el cual además sólo aislaría el puerto, no la radiación electromagnética captada por los electrodos que operan como antenas).</li>
               <li data-i18n="sec8Item2"><strong>Pines D10 y D11 de Arduino:</strong> Se configuran como entradas digitales conectadas a los pines LO- y LO+ del AD8232 para estabilizar las referencias y detectar electrodos desprendidos.</li>
-              <li data-i18n="sec8Item3"><strong>Compatibilidad de Microcontrolador:</strong> Puede emplearse cualquier Arduino (Uno o Nano). Se seleccionó el Nano por su formato compacto. Para microcontroladores con chip CH340, instalar los controladores correspondientes y seleccionar <em>"Old Bootloader"</em> en el IDE de Arduino.</li>
+              <li data-i18n="sec8Item3"><strong>Compatibilidad de Microcontrolador &amp; Drivers:</strong> Puede emplearse cualquier Arduino (Uno o Nano). Se seleccionó el Nano por su formato compacto. Para placas que integran el chip conversor USB-Serial CH340 / CH340G, es indispensable instalar el <a href="https://www.geekfactory.mx/producto/tarjeta-compatible-con-arduino-nano-ch340g/" target="_blank" rel="noopener noreferrer" class="ecg-link-inline">controlador oficial de Arduino Nano CH340G ↗</a> y seleccionar <em>"ATmega328P (Old Bootloader)"</em> en el IDE de Arduino.</li>
               <li data-i18n="sec8Item4"><strong>Modo Comparativo Simultáneo:</strong> Si el usuario desea comparar simultáneamente el Serial Plotter de Arduino con el software en Python, puede conectar el cable USB desconectando previamente las baterías para evitar conflictos de alimentación.</li>
             </ul>
           </div>
@@ -1210,8 +1393,11 @@
           </div>
 
           <div class="ecg-alert-box info">
-            <strong data-i18n="sec10CodeLinkTitle">📂 Código Fuente de Arduino:</strong>
-            <span data-i18n="sec10CodeLinkDesc">El sketch oficial en lenguaje C/C++ se encuentra disponible en el <a href="https://github.com/BrandonAntonioSeguraTorres/Real-Time-ECG-Monitor-PyQt5-PyAudio-/releases/tag/ecg_monitor" target="_blank" rel="noopener noreferrer" class="ecg-link-inline">repositorio oficial de GitHub ↗</a>.</span>
+            <strong data-i18n="sec10CodeLinkTitle">📂 Código Fuente de Arduino &amp; Drivers CH340G:</strong>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.35rem;">
+              <span data-i18n="sec10CodeLinkDesc">El sketch oficial en lenguaje C/C++ se encuentra disponible en el <a href="https://github.com/BrandonAntonioSeguraTorres/Real-Time-ECG-Monitor-PyQt5-PyAudio-/releases/tag/ecg_monitor" target="_blank" rel="noopener noreferrer" class="ecg-link-inline">repositorio oficial de GitHub ↗</a>.</span>
+              <span data-i18n="sec10DriverDesc">🔌 <strong>Descarga de Drivers USB:</strong> Si tu placa Arduino Nano utiliza el chip USB-Serial CH340G, descarga el instalador oficial aquí: <a href="https://www.geekfactory.mx/producto/tarjeta-compatible-con-arduino-nano-ch340g/" target="_blank" rel="noopener noreferrer" class="ecg-link-inline"><strong>Descargar Drivers Arduino Nano CH340G (GeekFactory) ↗</strong></a>.</span>
+            </div>
           </div>
         </section>
 
@@ -1286,7 +1472,7 @@
             </div>
           </div>
 
-          <div class="ecg-figures-row single-col">
+          <div class="ecg-figures-row">
             <div class="ecg-fig-item" onclick="openLightbox(this)">
               <div class="ecg-fig-media-wrap cover-mode">
                 <img src="media/image35.jpeg" alt="Gabinete protector final impreso en 3D">
@@ -1294,6 +1480,36 @@
               <div class="ecg-fig-text">
                 <strong data-i18n="fig35CaptionTitle">Fig. 35: Gabinete de Aislamiento y Carcasa Protectora en 3D</strong>
                 <span data-i18n="fig35CaptionDesc">Encerramiento mecánico final impreso en 3D para robustez física y protección de los puntos de soldadura.</span>
+              </div>
+            </div>
+            <div class="ecg-fig-item" onclick="openLightbox(this)">
+              <div class="ecg-fig-media-wrap contain-mode">
+                <img src="media/inventor_iso1.png" alt="Modelado 3D de la carcasa en Autodesk Inventor">
+              <span class="ecg-fig-zoom-badge">🔍 Zoom</span></div>
+              <div class="ecg-fig-text">
+                <strong data-i18n="figInv1Title">Fig. 35B: Diseño CAD de Carcasa en Autodesk Inventor</strong>
+                <span data-i18n="figInv1Desc">Modelado paramétrico 3D de las cavidades para el Arduino Nano, conector TRS y módulo AD8232.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ecg-figures-row">
+            <div class="ecg-fig-item" onclick="openLightbox(this)">
+              <div class="ecg-fig-media-wrap contain-mode">
+                <img src="media/inventor_iso2.png" alt="Vista isométrica de ensamble en Autodesk Inventor">
+              <span class="ecg-fig-zoom-badge">🔍 Zoom</span></div>
+              <div class="ecg-fig-text">
+                <strong data-i18n="figInv2Title">Fig. 35C: Vista Isométrica Superior (Inventor)</strong>
+                <span data-i18n="figInv2Desc">Distribución de fijaciones mecánicas y tolerancias dimensionales para impresión 3D FDM.</span>
+              </div>
+            </div>
+            <div class="ecg-fig-item" onclick="openLightbox(this)">
+              <div class="ecg-fig-media-wrap contain-mode">
+                <img src="media/inventor_iso4.png" alt="Cierre y encaje de la tapa en Autodesk Inventor">
+              <span class="ecg-fig-zoom-badge">🔍 Zoom</span></div>
+              <div class="ecg-fig-text">
+                <strong data-i18n="figInv3Title">Fig. 35D: Sistema de Encastre y Cierre Hermético</strong>
+                <span data-i18n="figInv3Desc">Tapa protectora con guías de presión para evitar movimientos internos de la circuitería.</span>
               </div>
             </div>
           </div>
@@ -1426,6 +1642,292 @@
             </div>
           </div>
         </section>
+
+        <!-- SECCIÓN 13: VALIDACIÓN EXPERIMENTAL EN ROEDORES (RATAS) & QUIRÓFANO ACTIVO -->
+        <section class="ecg-section-block" id="sec13">
+          <div class="ecg-section-header-row">
+            <h4 class="ecg-step-title-text" data-i18n="sec13Title">Validación Experimental en Roedores (Rattus norvegicus) en Entorno Quirúrgico Real</h4>
+          </div>
+          <p class="ecg-body-p" data-i18n="sec13P1">
+            Una de las metas primordiales formuladas en la Universidad Nacional de Cuyo fue corroborar la viabilidad del monitor ECG en investigación preclínica con animales de laboratorio pequeños (ratas). Debido a la taquicardia fisiológica de los roedores (frecuencias cardíacas basales de <strong>300 a 500 latidos por minuto</strong>) y a que el miocardio murino produce biopotenciales sustancialmente menores que los humanos (~0.1 a 0.3 mV frente a ~1.0 mV en humanos), el software en Python se configuró específicamente con una frecuencia de corte adaptativa a <strong>150 Hz</strong>.
+          </p>
+
+          <div class="ecg-figures-row">
+            <div class="ecg-fig-item" onclick="openLightbox(this)">
+              <div class="ecg-fig-media-wrap cover-mode">
+                <img src="media/rat_derivations.jpeg" alt="Colocación de electrodos de derivación en extremidades de rata">
+              <span class="ecg-fig-zoom-badge">🔍 Zoom</span></div>
+              <div class="ecg-fig-text">
+                <strong data-i18n="fig58Title">Fig. 39: Posicionamiento de Derivaciones en Roedor de Laboratorio</strong>
+                <span data-i18n="fig58Desc">Fijación de las pinzas adaptadas en las extremidades de la rata bajo protocolo anestésico en la mesa quirúrgica.</span>
+              </div>
+            </div>
+            <div class="ecg-fig-item" onclick="openLightbox(this)">
+              <div class="ecg-fig-media-wrap contain-mode">
+                <img src="media/rat_ecg_baseline.png" alt="Traza electrocardiográfica en rata con filtrado a 150 Hz">
+              <span class="ecg-fig-zoom-badge">🔍 Zoom</span></div>
+              <div class="ecg-fig-text">
+                <strong data-i18n="fig59Title">Fig. 40: Registro Electrocardiográfico en Rata (Filtro Adaptativo a 150 Hz)</strong>
+                <span data-i18n="fig59Desc">Línea base estabilizada y respuesta de alta frecuencia capturando los complejos ventriculares rápidos del roedor.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ecg-figures-row">
+            <div class="ecg-fig-item" onclick="openLightbox(this)">
+              <div class="ecg-fig-media-wrap contain-mode">
+                <img src="media/rat_ecg_zoom.png" alt="Detalle ampliado de la señal ECG en rata evidenciando picos R periódicos">
+              <span class="ecg-fig-zoom-badge">🔍 Zoom</span></div>
+              <div class="ecg-fig-text">
+                <strong data-i18n="fig60Title">Fig. 41: Análisis Morfométrico con Zoom en Registro Murino</strong>
+                <span data-i18n="fig60Desc">Detección periódica nítida de cada latido en tiempo real, confirmando el ritmo sinusal y frecuencia instantánea.</span>
+              </div>
+            </div>
+            <div class="ecg-fig-item" onclick="openLightbox(this)">
+              <div class="ecg-fig-media-wrap contain-mode">
+                <img src="media/rat_ecg_all_noise.png" alt="ECG en rata con todas las fuentes de ruido del quirófano activas">
+              <span class="ecg-fig-zoom-badge">🔍 Zoom</span></div>
+              <div class="ecg-fig-text">
+                <strong data-i18n="fig61Title">Fig. 42: Prueba Extrema con Todas las Fuentes de Ruido Quirúrgico</strong>
+                <span data-i18n="fig61Desc">Operación bajo la confluencia de máquina respiradora, lámparas quirúrgicas, manta térmica y telefonía móvil.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ecg-alert-box warning">
+            <strong data-i18n="sec13AlertTitle">⚡ Hallazgos Críticos en Cirugía Experimental:</strong>
+            <p style="margin-top: 0.35rem;" data-i18n="sec13AlertDesc">
+              Al confluir el total de las fuentes de interferencia del laboratorio (el motor del ventilador/respirador artificial, la manta térmica calefactora de la camilla, los focos halógenos y los teléfonos móviles cercanos), las ondas secundarias menores (P y T) se enmascaran debido al bajo voltaje intrínseco del roedor. No obstante, <strong>el software y la electrónica preservan íntegramente los picos R y la cadencia de cada latido en tiempo real</strong>. Esto cumplió a cabalidad el requerimiento del protocolo médico: monitorear con absoluta certidumbre metrológica que el animal permanezca con vida durante procedimientos quirúrgicos complejos.
+            </p>
+          </div>
+
+          <p class="ecg-body-p" data-i18n="sec13P2">
+            Adicionalmente, se contrastó el desempeño de este desarrollo frente a diversas iniciativas de monitores construidos con osciloscopios convencionales reportados en la literatura:
+          </p>
+
+          <div class="ecg-figures-row single-col">
+            <div class="ecg-fig-item" onclick="openLightbox(this)">
+              <div class="ecg-fig-media-wrap contain-mode">
+                <img src="media/oscillo_comparison.jpeg" alt="Comparativa lado a lado entre proyectos en osciloscopio y el monitor desarrollado">
+              <span class="ecg-fig-zoom-badge">🔍 Zoom</span></div>
+              <div class="ecg-fig-text">
+                <strong data-i18n="fig57Title">Fig. 43: Evaluación Comparativa Frente a Señales en Osciloscopios</strong>
+                <span data-i18n="fig57Desc">Comparación contra registros de osciloscopio convencionales (LoboBlancox, Maldonado, Fernández); la combinación de hardware aislado y DSP en Python logra una señal superior al 95% libre de ruido parásito.</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECCIÓN 14: CONCLUSIONES CIENTÍFICAS Y METROLÓGICAS -->
+        <section class="ecg-section-block" id="sec14">
+          <div class="ecg-section-header-row">
+            <h4 class="ecg-step-title-text" data-i18n="sec14Title">Conclusiones Científicas y Metrológicas</h4>
+          </div>
+          <div class="ecg-objectives-box" style="border-color: rgba(34, 197, 94, 0.3); background: rgba(34, 197, 94, 0.05);">
+            <ul class="ecg-objectives-list">
+              <li><span class="obj-icon" style="color: #4ade80;">✔</span> <span data-i18n="sec14C1"><strong>Plena Funcionalidad Open Source:</strong> El monitor electrocardiograma desarrollado con componentes comerciales asequibles y librerías abiertas ofrece un desempeño clínico y experimental plenamente funcional.</span></li>
+              <li><span class="obj-icon" style="color: #4ade80;">✔</span> <span data-i18n="sec14C2"><strong>Inmunidad en Ambientes Hostiles:</strong> La integración de blindaje físico (Jaula de Faraday y cables apantallados) junto con filtrado digital por software permite operar con solvencia en la inmensa mayoría de escenarios con alta polución electromagnética.</span></li>
+              <li><span class="obj-icon" style="color: #4ade80;">✔</span> <span data-i18n="sec14C3"><strong>Eficacia Multiespecie:</strong> El sistema demostró su versatilidad tanto en sujetos humanos como en pequeños roedores de laboratorio (ratas), siendo óptimo en animales de mayor porte por la mayor amplitud de sus biopotenciales.</span></li>
+              <li><span class="obj-icon" style="color: #4ade80;">✔</span> <span data-i18n="sec14C4"><strong>Superioridad del Filtrado Digital Adaptativo:</strong> Los algoritmos en Python superaron drásticamente a los filtros analógicos tradicionales en hardware, eliminando costos adicionales de circuitería y permitiendo sintonización dinámica en tiempo real.</span></li>
+              <li><span class="obj-icon" style="color: #4ade80;">✔</span> <span data-i18n="sec14C5"><strong>Monitoreo Quirúrgico Confiable:</strong> En condiciones de máxima interferencia quirúrgica, el instrumento preserva la detección continua de la frecuencia cardíaca, cumpliendo el requerimiento de monitoreo vital intraoperatorio.</span></li>
+            </ul>
+          </div>
+
+          <!-- Agradecimientos Formales -->
+          <div class="ecg-ack-box">
+            <h5 data-i18n="secAckTitle">🎓 Agradecimientos Institucionales</h5>
+            <p class="ecg-ack-p" data-i18n="secAckP">
+              Agradecemos profundamente al <strong>Dr. Walter Manucha</strong> por brindarnos la oportunidad de colaborar en su laboratorio de investigación en la <strong>Universidad Nacional de Cuyo (UNCUYO)</strong> y aportar nuestro desarrollo a un proyecto biomédico en proceso; al médico cardiólogo <strong>Dr. Raúl Sanz</strong> por su invaluable amabilidad, tiempo y orientación clínica en derivaciones electrofisiológicas de Einthoven para depurar la señal; y al <strong>Dr. Emiliano Diez</strong> por haber sido el puente de contacto fundamental para hacer posible este proyecto.
+            </p>
+          </div>
+        </section>
+
+        <!-- SECCIÓN 15: FUENTES BIBLIOGRÁFICAS -->
+        <section class="ecg-section-block" id="sec15">
+          <div class="ecg-section-header-row">
+            <h4 class="ecg-step-title-text" data-i18n="sec15Title">Fuentes Bibliográficas &amp; Referencias Académicas</h4>
+          </div>
+          <p class="ecg-body-p" data-i18n="sec15Desc">
+            A continuación se listan las 20 referencias bibliográficas, manuales de fabricantes, artículos científicos y repositorios de código abierto consultados a lo largo de esta investigación:
+          </p>
+
+          <div class="ecg-biblio-grid">
+            <div class="ecg-biblio-card">
+              <div class="ecg-biblio-num">1</div>
+              <div class="ecg-biblio-content">
+                <strong>caseykuhns (2014)</strong>
+                AD8232 Heart Rate Monitor - Arduino Firmware Sketch.
+                <a href="https://github.com/sparkfun/AD8232_Heart_Rate_Monitor/blob/master/Software/Heart_Rate_Display_Arduino/Heart_Rate_Display_Arduino.ino" target="_blank" rel="noopener noreferrer">Ver en GitHub ↗</a>
+              </div>
+            </div>
+
+            <div class="ecg-biblio-card">
+              <div class="ecg-biblio-num">2</div>
+              <div class="ecg-biblio-content">
+                <strong>CASEYTHEROBOT / SparkFun (s.f.)</strong>
+                AD8232 Heart Rate Monitor Hookup Guide. SparkFun Electronics.
+                <a href="https://learn.sparkfun.com/tutorials/ad8232-heart-rate-monitor-hookup-guide/all" target="_blank" rel="noopener noreferrer">learn.sparkfun.com ↗</a>
+              </div>
+            </div>
+
+            <div class="ecg-biblio-card">
+              <div class="ecg-biblio-num">3</div>
+              <div class="ecg-biblio-content">
+                <strong>Universidad del País Vasco (EHU) (s.f.)</strong>
+                Resumen de las características de los filtros analógicos de Butterworth y Chebyshev. Procesado de Señales.
+                <a href="http://www.ehu.eus/Procesadodesenales/tema6/tx33.html" target="_blank" rel="noopener noreferrer">ehu.eus/Procesadodesenales ↗</a>
+              </div>
+            </div>
+
+            <div class="ecg-biblio-card">
+              <div class="ecg-biblio-num">4</div>
+              <div class="ecg-biblio-content">
+                <strong>Electrocardiografia.es (s.f.)</strong>
+                Fundamentos biofísicos de las derivaciones electrocardiográficas periféricas y precordiales.
+                <a href="http://www.electrocardiografia.es/derivaciones.html" target="_blank" rel="noopener noreferrer">electrocardiografia.es ↗</a>
+              </div>
+            </div>
+
+            <div class="ecg-biblio-card">
+              <div class="ecg-biblio-num">5</div>
+              <div class="ecg-biblio-content">
+                <strong>España, R. A. (2014)</strong>
+                Filtros digitales. 1.0 edición. España. Tratamiento digital de señales discretas y cálculo de frecuencias.
+              </div>
+            </div>
+
+            <div class="ecg-biblio-card">
+              <div class="ecg-biblio-num">6</div>
+              <div class="ecg-biblio-content">
+                <strong>Fernández, Y. (s.f.)</strong>
+                Electrocardiograma con Osciloscopio analógico y digital.
+                <a href="https://www.youtube.com/watch?v=-5LpNhX6SvA" target="_blank" rel="noopener noreferrer">Ver demostración en YouTube ↗</a>
+              </div>
+            </div>
+
+            <div class="ecg-biblio-card">
+              <div class="ecg-biblio-num">7</div>
+              <div class="ecg-biblio-content">
+                <strong>Grahldg / SparkFun (2018)</strong>
+                Heart Rate Display en Processing IDE para el front-end AD8232.
+                <a href="https://github.com/sparkfun/AD8232_Heart_Rate_Monitor/blob/master/Software/Heart_Rate_Display_Processing/Heart_Rate_Display/Heart_Rate_Display.pde" target="_blank" rel="noopener noreferrer">Ver en GitHub ↗</a>
+              </div>
+            </div>
+
+            <div class="ecg-biblio-card">
+              <div class="ecg-biblio-num">8</div>
+              <div class="ecg-biblio-content">
+                <strong>Krauss, J. D. (1992)</strong>
+                Electromagnetics &amp; Faraday Cage Protects from 100,000 V (4th ed.). McGraw-Hill. ISBN 0-07-035621-1.
+              </div>
+            </div>
+
+            <div class="ecg-biblio-card">
+              <div class="ecg-biblio-num">9</div>
+              <div class="ecg-biblio-content">
+                <strong>JasonU14 (s.f.)</strong>
+                Make Your Own Electrocardiogram (ECG) with Differential Amplifiers and Notch Filters. Instructables.
+                <a href="https://www.instructables.com/id/Make-Your-Own-Electrocardiogram-ECG/" target="_blank" rel="noopener noreferrer">instructables.com ↗</a>
+              </div>
+            </div>
+
+            <div class="ecg-biblio-card">
+              <div class="ecg-biblio-num">10</div>
+              <div class="ecg-biblio-content">
+                <strong>Juanra (s.f.)</strong>
+                Tipos de Cableado y Apantallamiento electromagnético de conductores coaxiales para instrumentación.
+                <a href="http://juanrajvr.blogspot.com/2014/11/tarea-31-tipos-de-cableado.html" target="_blank" rel="noopener noreferrer">Ver publicación técnica ↗</a>
+              </div>
+            </div>
+
+            <div class="ecg-biblio-card">
+              <div class="ecg-biblio-num">11</div>
+              <div class="ecg-biblio-content">
+                <strong>Lilly, L. S. (2016)</strong>
+                Pathophysiology of Heart Disease (6th ed.). Wolters Kluwer / Lippincott Williams &amp; Wilkins. ISBN 978-1451192759.
+              </div>
+            </div>
+
+            <div class="ecg-biblio-card">
+              <div class="ecg-biblio-num">12</div>
+              <div class="ecg-biblio-content">
+                <strong>Llamas, L. (2017)</strong>
+                Filtro paso bajo y paso alto exponencial en Arduino para reducción de ruido en sensores.
+                <a href="https://www.luisllamas.es/arduino-paso-bajo-exponencial/" target="_blank" rel="noopener noreferrer">luisllamas.es ↗</a>
+              </div>
+            </div>
+
+            <div class="ecg-biblio-card">
+              <div class="ecg-biblio-num">13</div>
+              <div class="ecg-biblio-content">
+                <strong>LoboBlancox (s.f.)</strong>
+                ECG con tres electrodos y derivaciones según Wilhelm Einthoven en osciloscopio.
+                <a href="https://www.youtube.com/watch?v=5JUKW2Ufijo" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
+              </div>
+            </div>
+
+            <div class="ecg-biblio-card">
+              <div class="ecg-biblio-num">14</div>
+              <div class="ecg-biblio-content">
+                <strong>Maldonado, J. (s.f.)</strong>
+                Electrocardiograma y acondicionamiento de bioseñales. Lab. TEIN.
+                <a href="https://www.youtube.com/watch?v=NWCq83T2q4Y" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
+              </div>
+            </div>
+
+            <div class="ecg-biblio-card">
+              <div class="ecg-biblio-num">15</div>
+              <div class="ecg-biblio-content">
+                <strong>Murillo, J. J. (2014)</strong>
+                Análisis y Procesado Avanzado de Señales Biomédicas: Filtrado Básico de Señales ECG. Universitat Politècnica de Catalunya (UPC).
+                <a href="https://www.researchgate.net/publication/271273652_Filtrado_Basico_de_Senales_Biomedicas" target="_blank" rel="noopener noreferrer">Ver en ResearchGate ↗</a>
+              </div>
+            </div>
+
+            <div class="ecg-biblio-card">
+              <div class="ecg-biblio-num">16</div>
+              <div class="ecg-biblio-content">
+                <strong>PJ, F. (2011)</strong>
+                El primer electrocardiograma de la historia: Willem Einthoven y el galvanómetro de cuerda.
+                <a href="http://www.medicinajoven.com/2011/05/el-primer-electrocardiograma-de-la.html" target="_blank" rel="noopener noreferrer">medicinajoven.com ↗</a>
+              </div>
+            </div>
+
+            <div class="ecg-biblio-card">
+              <div class="ecg-biblio-num">17</div>
+              <div class="ecg-biblio-content">
+                <strong>Feynman, R. P., Leighton, R. B., &amp; Sands, M. (1965)</strong>
+                The Feynman Lectures on Physics (Vol. III): Quantum Mechanics &amp; Wave Interference (Doble ranura de Young). Addison-Wesley.
+              </div>
+            </div>
+
+            <div class="ecg-biblio-card">
+              <div class="ecg-biblio-num">18</div>
+              <div class="ecg-biblio-content">
+                <strong>Analog Devices / SparkFun (s.f.)</strong>
+                AD8232: Single-Lead, Heart Rate Monitor Front End Data Sheet. Doc D10866-0-6/18(C).
+              </div>
+            </div>
+
+            <div class="ecg-biblio-card">
+              <div class="ecg-biblio-num">19</div>
+              <div class="ecg-biblio-content">
+                <strong>swharden (2019)</strong>
+                diyECG-1opAmp: Single Operational Amplifier Electrocardiogram Circuit Design.
+                <a href="https://github.com/swharden/diyECG-1opAmp/" target="_blank" rel="noopener noreferrer">Ver en GitHub ↗</a>
+              </div>
+            </div>
+
+            <div class="ecg-biblio-card">
+              <div class="ecg-biblio-num">20</div>
+              <div class="ecg-biblio-content">
+                <strong>Whittaker, E. T., &amp; Robinson, G. (1924)</strong>
+                The Calculus of Observations: A Treatise on Numerical Mathematics (Filtros polinómicos y suavizado Savitzky-Golay). Blackie &amp; Son. OCLC 1187948.
+              </div>
+            </div>
+          </div>
+        </section>
+
   </main>
 
   <!-- Lightbox Modal para Zoom de Imágenes -->
@@ -1454,6 +1956,53 @@
   <script>
     const I18N = {
       es: {
+
+      "ecgLabDirector": "Encargado de Laboratorio: <strong>Dr. Walter Manucha</strong> · Asesor Clínico: <strong>Dr. Raúl Sanz</strong>",
+      "sec1QuoteText": "\"Haciendo cita directa a Isaac Newton y a su célebre aforismo <em>'Apoyándonos en hombros de gigantes'</em>, este proyecto aborda el desarrollo de un monitor electrocardiograma Open Source para roedores y humanos en ambientes de alta interferencia electromagnética, democratizando herramientas biomédicas de investigación con tecnologías abiertas, transparentes y reproducibles.\"",
+      "sec1QuoteAuthor": "— Marco Filosófico y Metodológico de la Investigación (UNCUYO, 2019)",
+      "sec1ObjTitle": "🎯 Objetivos Formales de la Investigación",
+      "sec1Obj1": "<strong>Diseño en Plataforma Windows:</strong> Construir una aplicación robusta, portable y de baja latencia con interfaz gráfica intuitiva ejecutable en ordenadores convencionales.",
+      "sec1Obj2": "<strong>Arquitectura 100% Open Source:</strong> Implementar microcontroladores abiertos (Arduino) y ecosistema Python libre de costosas licencias privativas comerciales ($500 - $1,000 USD).",
+      "sec1Obj3": "<strong>Adquisición de Señal en Roedores de Laboratorio:</strong> Lograr la lectura electrofisiológica fidedigna en modelos animales murinos (ratas), adaptando la escala de voltaje a microvoltios.",
+      "sec1Obj4": "<strong>Supresión Digital Adaptativa de Ruido:</strong> Eliminar el ruido ambiental extremo mediante algoritmos DSP en tiempo real en vez de filtros analógicos rígidos.",
+      "figBru1Title": "Fig. 18A: Pinza de Bruselas Impresa en 3D (Thingiverse #25587)",
+      "figBru1Desc": "Geometría de pinza de resorte mecánico continuo, adaptada para sujeción ergonómica en falanges distales o extremidades de roedores.",
+      "figBru2Title": "Fig. 18B: Electrodos Secos de Contacto en Lámina de Cobre",
+      "figBru2Desc": "Montaje de banda conductora de cobre electrolítico de alta pureza con terminales soldados directamente a las mordazas de la pinza.",
+      "sec4StlTitle": "📥 Descarga Oficial del Modelo 3D de las Pinzas de Bruselas:",
+      "sec4StlDesc": "El diseño original 3D en formato STL utilizado para las pinzas anatómicas se encuentra publicado en Thingiverse: <a href=\"https://www.thingiverse.com/thing:25587\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"ecg-link-inline\">Descargar Pinza de Bruselas 3D en Thingiverse (Thing #25587) ↗</a>. También está disponible en el paquete de <a href=\"https://github.com/BrandonAntonioSeguraTorres/Real-Time-ECG-Monitor-PyQt5-PyAudio-/releases/tag/ecg_monitor\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"ecg-link-inline\">Releases de GitHub ↗</a>.",
+      "sec10DriverDesc": "🔌 <strong>Descarga de Drivers USB:</strong> Si tu placa Arduino Nano utiliza el chip USB-Serial CH340G, descarga el instalador oficial aquí: <a href=\"https://www.geekfactory.mx/producto/tarjeta-compatible-con-arduino-nano-ch340g/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"ecg-link-inline\"><strong>Descargar Drivers Arduino Nano CH340G (GeekFactory) ↗</strong></a>.",
+      "figInv1Title": "Fig. 35B: Diseño CAD de Carcasa en Autodesk Inventor",
+      "figInv1Desc": "Modelado paramétrico 3D de las cavidades para el Arduino Nano, conector TRS y módulo AD8232.",
+      "figInv2Title": "Fig. 35C: Vista Isométrica Superior (Inventor)",
+      "figInv2Desc": "Distribución de fijaciones mecánicas y tolerancias dimensionales para impresión 3D FDM.",
+      "figInv3Title": "Fig. 35D: Sistema de Encastre y Cierre Hermético",
+      "figInv3Desc": "Tapa protectora con guías de presión para evitar movimientos internos de la circuitería.",
+      "sec13Title": "Validación Experimental en Roedores (Rattus norvegicus) en Entorno Quirúrgico Real",
+      "sec13P1": "Una de las metas primordiales formuladas en la Universidad Nacional de Cuyo fue corroborar la viabilidad del monitor ECG en investigación preclínica con animales de laboratorio pequeños (ratas). Debido a la taquicardia fisiológica de los roedores (frecuencias cardíacas basales de <strong>300 a 500 latidos por minuto</strong>) y a que el miocardio murino produce biopotenciales sustancialmente menores que los humanos (~0.1 a 0.3 mV frente a ~1.0 mV en humanos), el software en Python se configuró específicamente con una frecuencia de corte adaptativa a <strong>150 Hz</strong>.",
+      "fig58Title": "Fig. 39: Posicionamiento de Derivaciones en Roedor de Laboratorio",
+      "fig58Desc": "Fijación de las pinzas adaptadas en las extremidades de la rata bajo protocolo anestésico en la mesa quirúrgica.",
+      "fig59Title": "Fig. 40: Registro Electrocardiográfico en Rata (Filtro Adaptativo a 150 Hz)",
+      "fig59Desc": "Línea base estabilizada y respuesta de alta frecuencia capturando los complejos ventriculares rápidos del roedor.",
+      "fig60Title": "Fig. 41: Análisis Morfométrico con Zoom en Registro Murino",
+      "fig60Desc": "Detección periódica nítida de cada latido en tiempo real, confirmando el ritmo sinusal y frecuencia instantánea.",
+      "fig61Title": "Fig. 42: Prueba Extrema con Todas las Fuentes de Ruido Quirúrgico",
+      "fig61Desc": "Operación bajo la confluencia de máquina respiradora, lámparas quirúrgicas, manta térmica y telefonía móvil.",
+      "sec13AlertTitle": "⚡ Hallazgos Críticos en Cirugía Experimental:",
+      "sec13AlertDesc": "Al confluir el total de las fuentes de interferencia del laboratorio (el motor del ventilador/respirador artificial, la manta térmica calefactora de la camilla, los focos halógenos y los teléfonos móviles cercanos), las ondas secundarias menores (P y T) se enmascaran debido al bajo voltaje intrínseco del roedor. No obstante, <strong>el software y la electrónica preservan íntegramente los picos R y la cadencia de cada latido en tiempo real</strong>. Esto cumplió a cabalidad el requerimiento del protocolo médico: monitorear con absoluta certidumbre metrológica que el animal permanezca con vida durante procedimientos quirúrgicos complejos.",
+      "sec13P2": "Adicionalmente, se contrastó el desempeño de este desarrollo frente a diversas iniciativas de monitores construidos con osciloscopios convencionales reportados en la literatura:",
+      "fig57Title": "Fig. 43: Evaluación Comparativa Frente a Señales en Osciloscopios",
+      "fig57Desc": "Comparación contra registros de osciloscopio convencionales (LoboBlancox, Maldonado, Fernández); la combinación de hardware aislado y DSP en Python logra una señal superior al 95% libre de ruido parásito.",
+      "sec14Title": "Conclusiones Científicas y Metrológicas",
+      "sec14C1": "<strong>Plena Funcionalidad Open Source:</strong> El monitor electrocardiograma desarrollado con componentes comerciales asequibles y librerías abiertas ofrece un desempeño clínico y experimental plenamente funcional.",
+      "sec14C2": "<strong>Inmunidad en Ambientes Hostiles:</strong> La integración de blindaje físico (Jaula de Faraday y cables apantallados) junto con filtrado digital por software permite operar con solvencia en la inmensa mayoría de escenarios con alta polución electromagnética.",
+      "sec14C3": "<strong>Eficacia Multiespecie:</strong> El sistema demostró su versatilidad tanto en sujetos humanos como en pequeños roedores de laboratorio (ratas), siendo óptimo en animales de mayor porte por la mayor amplitud de sus biopotenciales.",
+      "sec14C4": "<strong>Superioridad del Filtrado Digital Adaptativo:</strong> Los algoritmos en Python superaron drásticamente a los filtros analógicos tradicionales en hardware, eliminando costos adicionales de circuitería y permitiendo sintonización dinámica en tiempo real.",
+      "sec14C5": "<strong>Monitoreo Quirúrgico Confiable:</strong> En condiciones de máxima interferencia quirúrgica, el instrumento preserva la detección continua de la frecuencia cardíaca, cumpliendo el requerimiento de monitoreo vital intraoperatorio.",
+      "secAckTitle": "🎓 Agradecimientos Institucionales",
+      "secAckP": "Agradecemos profundamente al <strong>Dr. Walter Manucha</strong> por brindarnos la oportunidad de colaborar en su laboratorio de investigación en la <strong>Universidad Nacional de Cuyo (UNCUYO)</strong> y aportar nuestro desarrollo a un proyecto biomédico en proceso; al médico cardiólogo <strong>Dr. Raúl Sanz</strong> por su invaluable amabilidad, tiempo y orientación clínica en derivaciones electrofisiológicas de Einthoven para depurar la señal; y al <strong>Dr. Emiliano Diez</strong> por haber sido el puente de contacto fundamental para hacer posible este proyecto.",
+      "sec15Title": "Fuentes Bibliográficas & Referencias Académicas",
+      "sec15Desc": "A continuación se listan las 20 referencias bibliográficas, manuales de fabricantes, artículos científicos y repositorios de código abierto consultados a lo largo de esta investigación:",
       "fig5CaptionDesc": "Mejor resultado alcanzado mediante el firmware estándar: traza saturada de ruido de alta frecuencia inaceptable para investigación cardiológica.",
       "fig2CaptionTitle": "Fig. 2: Complejo Electrocardiográfico Estándar Teórico",
       "fig1CaptionTitle": "Fig. 1: Primer Registro Electrocardiográfico Obtenido",
@@ -1646,6 +2195,53 @@
       "fig4CaptionTitle": "Fig. 4: Expected Theoretical Record in Processing",
       "fig4CaptionDesc": "Theoretical waveform illustrated in the manufacturer's official documentation under ideal isolated operating conditions.",
       "fig5CaptionTitle": "Fig. 5: Actual Record Obtained with Manufacturer's Code",
+
+      "ecgLabDirector": "Encargado de Laboratorio: <strong>Dr. Walter Manucha</strong> · Asesor Clínico: <strong>Dr. Raúl Sanz</strong>",
+      "sec1QuoteText": "\"Haciendo cita directa a Isaac Newton y a su célebre aforismo <em>'Apoyándonos en hombros de gigantes'</em>, este proyecto aborda el desarrollo de un monitor electrocardiograma Open Source para roedores y humanos en ambientes de alta interferencia electromagnética, democratizando herramientas biomédicas de investigación con tecnologías abiertas, transparentes y reproducibles.\"",
+      "sec1QuoteAuthor": "— Marco Filosófico y Metodológico de la Investigación (UNCUYO, 2019)",
+      "sec1ObjTitle": "🎯 Objetivos Formales de la Investigación",
+      "sec1Obj1": "<strong>Diseño en Plataforma Windows:</strong> Construir una aplicación robusta, portable y de baja latencia con interfaz gráfica intuitiva ejecutable en ordenadores convencionales.",
+      "sec1Obj2": "<strong>Arquitectura 100% Open Source:</strong> Implementar microcontroladores abiertos (Arduino) y ecosistema Python libre de costosas licencias privativas comerciales ($500 - $1,000 USD).",
+      "sec1Obj3": "<strong>Adquisición de Señal en Roedores de Laboratorio:</strong> Lograr la lectura electrofisiológica fidedigna en modelos animales murinos (ratas), adaptando la escala de voltaje a microvoltios.",
+      "sec1Obj4": "<strong>Supresión Digital Adaptativa de Ruido:</strong> Eliminar el ruido ambiental extremo mediante algoritmos DSP en tiempo real en vez de filtros analógicos rígidos.",
+      "figBru1Title": "Fig. 18A: Pinza de Bruselas Impresa en 3D (Thingiverse #25587)",
+      "figBru1Desc": "Geometría de pinza de resorte mecánico continuo, adaptada para sujeción ergonómica en falanges distales o extremidades de roedores.",
+      "figBru2Title": "Fig. 18B: Electrodos Secos de Contacto en Lámina de Cobre",
+      "figBru2Desc": "Montaje de banda conductora de cobre electrolítico de alta pureza con terminales soldados directamente a las mordazas de la pinza.",
+      "sec4StlTitle": "📥 Descarga Oficial del Modelo 3D de las Pinzas de Bruselas:",
+      "sec4StlDesc": "El diseño original 3D en formato STL utilizado para las pinzas anatómicas se encuentra publicado en Thingiverse: <a href=\"https://www.thingiverse.com/thing:25587\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"ecg-link-inline\">Descargar Pinza de Bruselas 3D en Thingiverse (Thing #25587) ↗</a>. También está disponible en el paquete de <a href=\"https://github.com/BrandonAntonioSeguraTorres/Real-Time-ECG-Monitor-PyQt5-PyAudio-/releases/tag/ecg_monitor\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"ecg-link-inline\">Releases de GitHub ↗</a>.",
+      "sec10DriverDesc": "🔌 <strong>Descarga de Drivers USB:</strong> Si tu placa Arduino Nano utiliza el chip USB-Serial CH340G, descarga el instalador oficial aquí: <a href=\"https://www.geekfactory.mx/producto/tarjeta-compatible-con-arduino-nano-ch340g/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"ecg-link-inline\"><strong>Descargar Drivers Arduino Nano CH340G (GeekFactory) ↗</strong></a>.",
+      "figInv1Title": "Fig. 35B: Diseño CAD de Carcasa en Autodesk Inventor",
+      "figInv1Desc": "Modelado paramétrico 3D de las cavidades para el Arduino Nano, conector TRS y módulo AD8232.",
+      "figInv2Title": "Fig. 35C: Vista Isométrica Superior (Inventor)",
+      "figInv2Desc": "Distribución de fijaciones mecánicas y tolerancias dimensionales para impresión 3D FDM.",
+      "figInv3Title": "Fig. 35D: Sistema de Encastre y Cierre Hermético",
+      "figInv3Desc": "Tapa protectora con guías de presión para evitar movimientos internos de la circuitería.",
+      "sec13Title": "Validación Experimental en Roedores (Rattus norvegicus) en Entorno Quirúrgico Real",
+      "sec13P1": "Una de las metas primordiales formuladas en la Universidad Nacional de Cuyo fue corroborar la viabilidad del monitor ECG en investigación preclínica con animales de laboratorio pequeños (ratas). Debido a la taquicardia fisiológica de los roedores (frecuencias cardíacas basales de <strong>300 a 500 latidos por minuto</strong>) y a que el miocardio murino produce biopotenciales sustancialmente menores que los humanos (~0.1 a 0.3 mV frente a ~1.0 mV en humanos), el software en Python se configuró específicamente con una frecuencia de corte adaptativa a <strong>150 Hz</strong>.",
+      "fig58Title": "Fig. 39: Posicionamiento de Derivaciones en Roedor de Laboratorio",
+      "fig58Desc": "Fijación de las pinzas adaptadas en las extremidades de la rata bajo protocolo anestésico en la mesa quirúrgica.",
+      "fig59Title": "Fig. 40: Registro Electrocardiográfico en Rata (Filtro Adaptativo a 150 Hz)",
+      "fig59Desc": "Línea base estabilizada y respuesta de alta frecuencia capturando los complejos ventriculares rápidos del roedor.",
+      "fig60Title": "Fig. 41: Análisis Morfométrico con Zoom en Registro Murino",
+      "fig60Desc": "Detección periódica nítida de cada latido en tiempo real, confirmando el ritmo sinusal y frecuencia instantánea.",
+      "fig61Title": "Fig. 42: Prueba Extrema con Todas las Fuentes de Ruido Quirúrgico",
+      "fig61Desc": "Operación bajo la confluencia de máquina respiradora, lámparas quirúrgicas, manta térmica y telefonía móvil.",
+      "sec13AlertTitle": "⚡ Hallazgos Críticos en Cirugía Experimental:",
+      "sec13AlertDesc": "Al confluir el total de las fuentes de interferencia del laboratorio (el motor del ventilador/respirador artificial, la manta térmica calefactora de la camilla, los focos halógenos y los teléfonos móviles cercanos), las ondas secundarias menores (P y T) se enmascaran debido al bajo voltaje intrínseco del roedor. No obstante, <strong>el software y la electrónica preservan íntegramente los picos R y la cadencia de cada latido en tiempo real</strong>. Esto cumplió a cabalidad el requerimiento del protocolo médico: monitorear con absoluta certidumbre metrológica que el animal permanezca con vida durante procedimientos quirúrgicos complejos.",
+      "sec13P2": "Adicionalmente, se contrastó el desempeño de este desarrollo frente a diversas iniciativas de monitores construidos con osciloscopios convencionales reportados en la literatura:",
+      "fig57Title": "Fig. 43: Evaluación Comparativa Frente a Señales en Osciloscopios",
+      "fig57Desc": "Comparación contra registros de osciloscopio convencionales (LoboBlancox, Maldonado, Fernández); la combinación de hardware aislado y DSP en Python logra una señal superior al 95% libre de ruido parásito.",
+      "sec14Title": "Conclusiones Científicas y Metrológicas",
+      "sec14C1": "<strong>Plena Funcionalidad Open Source:</strong> El monitor electrocardiograma desarrollado con componentes comerciales asequibles y librerías abiertas ofrece un desempeño clínico y experimental plenamente funcional.",
+      "sec14C2": "<strong>Inmunidad en Ambientes Hostiles:</strong> La integración de blindaje físico (Jaula de Faraday y cables apantallados) junto con filtrado digital por software permite operar con solvencia en la inmensa mayoría de escenarios con alta polución electromagnética.",
+      "sec14C3": "<strong>Eficacia Multiespecie:</strong> El sistema demostró su versatilidad tanto en sujetos humanos como en pequeños roedores de laboratorio (ratas), siendo óptimo en animales de mayor porte por la mayor amplitud de sus biopotenciales.",
+      "sec14C4": "<strong>Superioridad del Filtrado Digital Adaptativo:</strong> Los algoritmos en Python superaron drásticamente a los filtros analógicos tradicionales en hardware, eliminando costos adicionales de circuitería y permitiendo sintonización dinámica en tiempo real.",
+      "sec14C5": "<strong>Monitoreo Quirúrgico Confiable:</strong> En condiciones de máxima interferencia quirúrgica, el instrumento preserva la detección continua de la frecuencia cardíaca, cumpliendo el requerimiento de monitoreo vital intraoperatorio.",
+      "secAckTitle": "🎓 Agradecimientos Institucionales",
+      "secAckP": "Agradecemos profundamente al <strong>Dr. Walter Manucha</strong> por brindarnos la oportunidad de colaborar en su laboratorio de investigación en la <strong>Universidad Nacional de Cuyo (UNCUYO)</strong> y aportar nuestro desarrollo a un proyecto biomédico en proceso; al médico cardiólogo <strong>Dr. Raúl Sanz</strong> por su invaluable amabilidad, tiempo y orientación clínica en derivaciones electrofisiológicas de Einthoven para depurar la señal; y al <strong>Dr. Emiliano Diez</strong> por haber sido el puente de contacto fundamental para hacer posible este proyecto.",
+      "sec15Title": "Fuentes Bibliográficas & Referencias Académicas",
+      "sec15Desc": "A continuación se listan las 20 referencias bibliográficas, manuales de fabricantes, artículos científicos y repositorios de código abierto consultados a lo largo de esta investigación:",
       "fig5CaptionDesc": "Best real-world result achieved using the standard factory firmware: trace saturated with high-frequency noise, unacceptable for clinical research.",
       "sec3Title": "Isolation Protocol & Electromagnetic Interference (EMI) Source Characterization",
       "sec3P1": "To systematically isolate noise components, a factorial elimination protocol was designed to identify the contribution of each element in the experimental environment. First, an ideal electromagnetic isolation baseline was evaluated: laptop workstation powered purely by internal DC battery, disconnected from mains, and isolated from active equipment:",

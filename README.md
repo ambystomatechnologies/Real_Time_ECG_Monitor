@@ -32,16 +32,21 @@ Plataforma de telemetría electrofisiológica no invasiva y guía de ingeniería
 ## 📥 Descargas y Enlaces Oficiales
 
 - **Software Compilado (Release Oficial):** [Descargar en GitHub Releases (v_ecg_monitor)](https://github.com/BrandonAntonioSeguraTorres/Real-Time-ECG-Monitor-PyQt5-PyAudio-/releases/tag/ecg_monitor)
+- **Pinzas de Bruselas 3D (Thingiverse):** [Descargar modelo STL (Thing #25587)](https://www.thingiverse.com/thing:25587)
+- **Controladores Arduino Nano CH340G:** [Descargar Drivers USB CH340G (GeekFactory)](https://www.geekfactory.mx/producto/tarjeta-compatible-con-arduino-nano-ch340g/)
 - **Video Demostrativo Experimental:** [Ver en YouTube (8 min)](https://www.youtube.com/watch?v=NcodDkrldqQ&t=8s)
 - **Repositorio de la Guía Web:** [https://github.com/ambystomatechnologies/Real_Time_ECG_Monitor](https://github.com/ambystomatechnologies/Real_Time_ECG_Monitor)
 - **Portal Oficial:** [https://ambystomatechnologies.github.io/](https://ambystomatechnologies.github.io/)
 
 ---
 
-## 👥 Investigadores y Autores
+## 👥 Investigadores y Reconocimientos Académicos
 
-- **Brandon Antonio Segura Torres** (CEO & Fundador, Ambystoma Technologies)
-- **Priscilla Vieto Bonilla** (Ciencias Biológicas)
+- **Autores Principales:** Brandon Antonio Segura Torres & Priscilla Vieto Bonilla
+- **Filiación:** Universidad Nacional de Cuyo (Mendoza, Argentina) & Ambystoma Technologies (2019)
+- **Encargado de Laboratorio:** Dr. Walter Manucha
+- **Asesor Clínico Cardiológico:** Dr. Raúl Sanz
+- **Enlace Institucional:** Dr. Emiliano Diez
 
 ---
 
