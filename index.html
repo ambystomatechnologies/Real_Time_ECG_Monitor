@@ -1320,7 +1320,7 @@
             <ul style="padding-left: 1.25rem; margin-top: 0.35rem; display: flex; flex-direction: column; gap: 0.35rem;">
               <li data-i18n="sec8Item1"><strong>Alimentación por Baterías DC:</strong> Se emplean baterías para energizar el circuito, desvinculando galvánicamente el sistema de la red eléctrica y del bus USB. Esto ahorra los $40 USD de un aislador de señal USB externo (el cual además sólo aislaría el puerto, no la radiación electromagnética captada por los electrodos que operan como antenas).</li>
               <li data-i18n="sec8Item2"><strong>Pines D10 y D11 de Arduino:</strong> Se configuran como entradas digitales conectadas a los pines LO- y LO+ del AD8232 para estabilizar las referencias y detectar electrodos desprendidos.</li>
-              <li data-i18n="sec8Item3"><strong>Compatibilidad de Microcontrolador &amp; Drivers:</strong> Puede emplearse cualquier Arduino (Uno o Nano). Se seleccionó el Nano por su formato compacto. Para placas que integran el chip conversor USB-Serial CH340 / CH340G, es indispensable instalar el <a href="https://www.geekfactory.mx/producto/tarjeta-compatible-con-arduino-nano-ch340g/" target="_blank" rel="noopener noreferrer" class="ecg-link-inline">controlador oficial de Arduino Nano CH340G ↗</a> y seleccionar <em>"ATmega328P (Old Bootloader)"</em> en el IDE de Arduino.</li>
+              <li data-i18n="sec8Item3"><strong>Compatibilidad de Microcontrolador &amp; Drivers:</strong> Puede emplearse cualquier Arduino (Uno o Nano). Se seleccionó el Nano por su formato compacto. Para placas que integran el chip conversor USB-Serial CH340 / CH340G, es indispensable instalar el <a href="https://www.geekfactory.mx/tutoriales-arduino/driver-ch340-para-arduino-chinos-o-genericos/?srsltid=AU7gw4V95chWBvRuppP-IWDALowqWvLw0kzjA8_aU33LKMbq8qcoaZgn" target="_blank" rel="noopener noreferrer" class="ecg-link-inline">controlador oficial de Arduino Nano CH340G ↗</a> y seleccionar <em>"ATmega328P (Old Bootloader)"</em> en el IDE de Arduino.</li>
               <li data-i18n="sec8Item4"><strong>Modo Comparativo Simultáneo:</strong> Si el usuario desea comparar simultáneamente el Serial Plotter de Arduino con el software en Python, puede conectar el cable USB desconectando previamente las baterías para evitar conflictos de alimentación.</li>
             </ul>
           </div>
@@ -1393,11 +1393,8 @@
           </div>
 
           <div class="ecg-alert-box info">
-            <strong data-i18n="sec10CodeLinkTitle">📂 Código Fuente de Arduino &amp; Drivers CH340G:</strong>
-            <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.35rem;">
-              <span data-i18n="sec10CodeLinkDesc">El sketch oficial en lenguaje C/C++ se encuentra disponible en el <a href="https://github.com/BrandonAntonioSeguraTorres/Real-Time-ECG-Monitor-PyQt5-PyAudio-/releases/tag/ecg_monitor" target="_blank" rel="noopener noreferrer" class="ecg-link-inline">repositorio oficial de GitHub ↗</a>.</span>
-              <span data-i18n="sec10DriverDesc">🔌 <strong>Descarga de Drivers USB:</strong> Si tu placa Arduino Nano utiliza el chip USB-Serial CH340G, descarga el instalador oficial aquí: <a href="https://www.geekfactory.mx/producto/tarjeta-compatible-con-arduino-nano-ch340g/" target="_blank" rel="noopener noreferrer" class="ecg-link-inline"><strong>Descargar Drivers Arduino Nano CH340G (GeekFactory) ↗</strong></a>.</span>
-            </div>
+            <strong data-i18n="sec10DriverTitle">🔌 Descarga de Drivers USB:</strong>
+            <span data-i18n="sec10DriverDesc">Si tu placa Arduino Nano utiliza el chip USB-Serial CH340 / CH340G, puedes descargar e instalar los controladores oficiales desde el siguiente tutorial: <a href="https://www.geekfactory.mx/tutoriales-arduino/driver-ch340-para-arduino-chinos-o-genericos/?srsltid=AU7gw4V95chWBvRuppP-IWDALowqWvLw0kzjA8_aU33LKMbq8qcoaZgn" target="_blank" rel="noopener noreferrer" class="ecg-link-inline"><strong>Descargar Driver CH340 para Arduino (GeekFactory) ↗</strong></a>.</span>
           </div>
         </section>
 
@@ -1971,7 +1968,8 @@
       "figBru2Desc": "Montaje de banda conductora de cobre electrolítico de alta pureza con terminales soldados directamente a las mordazas de la pinza.",
       "sec4StlTitle": "📥 Descarga Oficial del Modelo 3D de las Pinzas de Bruselas:",
       "sec4StlDesc": "El diseño original 3D en formato STL utilizado para las pinzas anatómicas se encuentra publicado en Thingiverse: <a href=\"https://www.thingiverse.com/thing:25587\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"ecg-link-inline\">Descargar Pinza de Bruselas 3D en Thingiverse (Thing #25587) ↗</a>.",
-      "sec10DriverDesc": "🔌 <strong>Descarga de Drivers USB:</strong> Si tu placa Arduino Nano utiliza el chip USB-Serial CH340G, descarga el instalador oficial aquí: <a href=\"https://www.geekfactory.mx/producto/tarjeta-compatible-con-arduino-nano-ch340g/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"ecg-link-inline\"><strong>Descargar Drivers Arduino Nano CH340G (GeekFactory) ↗</strong></a>.",
+      "sec10DriverTitle": "🔌 Descarga de Drivers USB:",
+      "sec10DriverDesc": "Si tu placa Arduino Nano utiliza el chip USB-Serial CH340 / CH340G, puedes descargar e instalar los controladores oficiales desde el siguiente tutorial: <a href=\"https://www.geekfactory.mx/tutoriales-arduino/driver-ch340-para-arduino-chinos-o-genericos/?srsltid=AU7gw4V95chWBvRuppP-IWDALowqWvLw0kzjA8_aU33LKMbq8qcoaZgn\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"ecg-link-inline\"><strong>Descargar Driver CH340 para Arduino (GeekFactory) ↗</strong></a>.",
       "figInv1Title": "Fig. 35B: Diseño CAD de Carcasa en Autodesk Inventor",
       "figInv1Desc": "Modelado paramétrico 3D de las cavidades para el Arduino Nano, conector TRS y módulo AD8232.",
       "figInv2Title": "Fig. 35C: Vista Isométrica Superior (Inventor)",
@@ -2210,7 +2208,8 @@
       "figBru2Desc": "Montaje de banda conductora de cobre electrolítico de alta pureza con terminales soldados directamente a las mordazas de la pinza.",
       "sec4StlTitle": "📥 Descarga Oficial del Modelo 3D de las Pinzas de Bruselas:",
       "sec4StlDesc": "The original 3D design in STL format used for the anatomical clips is published on Thingiverse: <a href=\"https://www.thingiverse.com/thing:25587\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"ecg-link-inline\">Download Brussels Clip 3D on Thingiverse (Thing #25587) ↗</a>.",
-      "sec10DriverDesc": "🔌 <strong>Descarga de Drivers USB:</strong> Si tu placa Arduino Nano utiliza el chip USB-Serial CH340G, descarga el instalador oficial aquí: <a href=\"https://www.geekfactory.mx/producto/tarjeta-compatible-con-arduino-nano-ch340g/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"ecg-link-inline\"><strong>Descargar Drivers Arduino Nano CH340G (GeekFactory) ↗</strong></a>.",
+      "sec10DriverTitle": "🔌 USB Driver Download:",
+      "sec10DriverDesc": "If your Arduino Nano board features the CH340 / CH340G USB-Serial converter chip, you can download and install the official drivers from the following guide: <a href=\"https://www.geekfactory.mx/tutoriales-arduino/driver-ch340-para-arduino-chinos-o-genericos/?srsltid=AU7gw4V95chWBvRuppP-IWDALowqWvLw0kzjA8_aU33LKMbq8qcoaZgn\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"ecg-link-inline\"><strong>Download CH340 Driver for Arduino (GeekFactory) ↗</strong></a>.",
       "figInv1Title": "Fig. 35B: Diseño CAD de Carcasa en Autodesk Inventor",
       "figInv1Desc": "Modelado paramétrico 3D de las cavidades para el Arduino Nano, conector TRS y módulo AD8232.",
       "figInv2Title": "Fig. 35C: Vista Isométrica Superior (Inventor)",

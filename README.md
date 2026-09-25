@@ -33,7 +33,7 @@ Plataforma de telemetría electrofisiológica no invasiva y guía de ingeniería
 
 - **Software Compilado (Release Oficial):** [Descargar en GitHub Releases (v_ecg_monitor)](https://github.com/BrandonAntonioSeguraTorres/Real-Time-ECG-Monitor-PyQt5-PyAudio-/releases/tag/ecg_monitor)
 - **Pinzas de Bruselas 3D (Thingiverse):** [Descargar modelo STL (Thing #25587)](https://www.thingiverse.com/thing:25587)
-- **Controladores Arduino Nano CH340G:** [Descargar Drivers USB CH340G (GeekFactory)](https://www.geekfactory.mx/producto/tarjeta-compatible-con-arduino-nano-ch340g/)
+- **Controladores Arduino Nano CH340G:** [Descargar Tutorial y Drivers USB CH340 (GeekFactory)](https://www.geekfactory.mx/tutoriales-arduino/driver-ch340-para-arduino-chinos-o-genericos/?srsltid=AU7gw4V95chWBvRuppP-IWDALowqWvLw0kzjA8_aU33LKMbq8qcoaZgn)
 - **Video Demostrativo Experimental:** [Ver en YouTube (8 min)](https://www.youtube.com/watch?v=NcodDkrldqQ&t=8s)
 - **Repositorio de la Guía Web:** [https://github.com/ambystomatechnologies/Real_Time_ECG_Monitor](https://github.com/ambystomatechnologies/Real_Time_ECG_Monitor)
 - **Portal Oficial:** [https://ambystomatechnologies.github.io/](https://ambystomatechnologies.github.io/)
