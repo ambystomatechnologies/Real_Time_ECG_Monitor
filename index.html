@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Guía exhaustiva, desarrollo y sistema de telemetría electrocardiográfica (ECG) en tiempo real con acondicionamiento AD8232, captura por tarjeta de audio de alta fidelidad, electrodos secos 3D y DSP adaptativo en Python.">
+  <meta name="description" content="Guía de construcción, desarrollo y sistema de telemetría electrocardiográfica (ECG) Módulo AD8232 Sparkfun en tiempo real con acondicionamiento AD8232, captura por tarjeta de audio de alta fidelidad, electrodos secos 3D y DSP adaptativo en Python.">
   <meta name="author" content="Brandon Antonio Segura Torres & Priscilla Vieto Bonilla - Ambystoma Technologies">
   <meta name="keywords" content="ECG, Electrocardiograma, AD8232, Telemetría, Biomédica, Python, PyAudio, PyQt5, DSP, Electrodos Secos 3D, Jaula de Faraday, Open Source, Ambystoma Technologies">
 
   <!-- Open Graph / Meta Social -->
-  <meta property="og:title" content="Monitor Electrocardiograma en Tiempo Real (ECG) & Procesamiento DSP">
+  <meta property="og:title" content="Monitor Electrocardiograma en Tiempo Real (ECG) Módulo AD8232 Sparkfun & Procesamiento DSP">
   <meta property="og:description" content="Guía científica completa de telemetría cardíaca no invasiva, adquisición analógica por tarjeta de audio, electrodos 3D y filtrado adaptativo.">
   <meta property="og:type" content="article">
   <meta property="og:image" content="media/image22.jpeg">
 
-  <title data-i18n="docTitle">Monitor Electrocardiograma en Tiempo Real (ECG) · Guía Técnica Completa · Ambystoma Technologies</title>
+  <title data-i18n="docTitle">Monitor Electrocardiograma en Tiempo Real (ECG) Módulo AD8232 Sparkfun · Guía Técnica Completa · Ambystoma Technologies</title>
 
   <!-- Favicons oficiales -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -164,63 +164,50 @@
       gap: 0.75rem;
     }
 
-    .search-box {
-      position: relative;
-    }
-
-    .search-box input {
-      background: rgba(15, 23, 42, 0.85);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 9999px;
-      padding: 0.45rem 1rem 0.45rem 2rem;
-      color: #ffffff;
-      font-size: 0.84rem;
-      width: 240px;
-      transition: all 0.2s ease;
-      font-family: inherit;
-    }
-
-    .search-box input:focus {
-      outline: none;
-      border-color: #38bdf8;
-      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
-      width: 280px;
-    }
-
-    .search-icon {
-      position: absolute;
-      left: 0.75rem;
-      top: 50%;
-      transform: translateY(-50%);
-      color: #64748b;
-      font-size: 0.82rem;
-      pointer-events: none;
-    }
-
-    .btn-lang-toggle {
+    /* Selector de Idiomas con Banderas Circulares */
+    .lang-switch {
       display: inline-flex;
       align-items: center;
-      gap: 0.45rem;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      padding: 0.45rem 0.85rem;
+      gap: 0.35rem;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 3px 6px;
       border-radius: 9999px;
-      color: #f1f5f9;
-      font-weight: 700;
-      font-size: 0.82rem;
+      border: 1px solid var(--card-border);
+    }
+
+    .lang-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      padding: 0;
+      background: transparent;
       cursor: pointer;
-      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+      opacity: 0.6;
     }
 
-    .btn-lang-toggle:hover {
-      background: rgba(255, 255, 255, 0.12);
-      border-color: rgba(255, 255, 255, 0.25);
-      transform: translateY(-1px);
+    .lang-btn:hover {
+      opacity: 1;
+      transform: scale(1.12);
     }
 
-    .lang-flag {
-      border-radius: 2px;
+    .lang-btn.active {
+      opacity: 1;
+      border-color: var(--accent);
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
+      transform: scale(1.06);
+    }
+
+    .lang-btn svg {
+      width: 100%;
+      height: 100%;
       display: block;
+      border-radius: 50%;
+      pointer-events: none;
     }
 
     /* Hero Principal */
@@ -268,61 +255,7 @@
       font-size: 1.12rem;
       line-height: 1.7;
       max-width: 840px;
-      margin: 0 auto 2.1rem;
-    }
-
-    .hero-actions-row {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.9rem;
-      flex-wrap: wrap;
-    }
-
-    .btn-action-primary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 0.85rem 1.75rem;
-      background: var(--danger-gradient);
-      color: #ffffff;
-      font-weight: 700;
-      font-size: 0.95rem;
-      border-radius: 0.65rem;
-      text-decoration: none;
-      box-shadow: 0 4px 18px rgba(239, 68, 68, 0.4);
-      transition: all 0.25s ease;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .btn-action-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(239, 68, 68, 0.55);
-      border-color: rgba(255, 255, 255, 0.4);
-    }
-
-    .btn-action-secondary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 0.85rem 1.4rem;
-      background: rgba(255, 255, 255, 0.05);
-      color: #f1f5f9;
-      font-weight: 600;
-      font-size: 0.92rem;
-      border-radius: 0.65rem;
-      text-decoration: none;
-      border: 1px solid var(--card-border);
-      transition: all 0.25s ease;
-    }
-
-    .btn-action-secondary:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.25);
-      color: #ffffff;
-      transform: translateY(-2px);
+      margin: 0 auto 0.5rem;
     }
 
     /* Quick Meta Card */
@@ -341,46 +274,6 @@
       flex-wrap: wrap;
     }
 
-    /* Sticky Section Navigation Bar */
-    .sticky-nav-bar {
-      position: sticky;
-      top: 56px;
-      z-index: 900;
-      background: rgba(7, 11, 20, 0.94);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--card-border);
-      padding: 0.55rem 1.5rem;
-      display: flex;
-      gap: 0.45rem;
-      overflow-x: auto;
-      white-space: nowrap;
-      scrollbar-width: thin;
-      max-width: 100%;
-    }
-
-    .nav-pill-btn {
-      font-size: 0.76rem;
-      font-weight: 700;
-      color: #94a3b8;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 0.35rem 0.8rem;
-      border-radius: 9999px;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      display: inline-flex;
-      align-items: center;
-      flex-shrink: 0;
-    }
-
-    .nav-pill-btn:hover {
-      color: #ffffff;
-      background: rgba(56, 189, 248, 0.15);
-      border-color: rgba(56, 189, 248, 0.4);
-      transform: translateY(-1px);
-    }
-
     /* Main Container */
     main {
       max-width: 1040px;
@@ -396,31 +289,16 @@
       padding: 1.85rem;
       margin-bottom: 2rem;
       position: relative;
-      scroll-margin-top: 110px;
+      scroll-margin-top: 80px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
     }
 
     .ecg-section-header-row {
       display: flex;
-      align-items: flex-start;
-      gap: 0.95rem;
+      align-items: center;
       margin-bottom: 1.25rem;
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
       padding-bottom: 0.95rem;
-    }
-
-    .ecg-step-number {
-      font-size: 0.74rem;
-      font-weight: 800;
-      padding: 0.25rem 0.65rem;
-      border-radius: 9999px;
-      background: rgba(239, 68, 68, 0.14);
-      color: #f87171;
-      border: 1px solid rgba(239, 68, 68, 0.35);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      flex-shrink: 0;
-      margin-top: 0.15rem;
     }
 
     .ecg-step-title-text {
@@ -733,27 +611,22 @@
 
     @media (max-width: 768px) {
       .header-inner {
-        flex-direction: column;
-        align-items: stretch;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
       }
       .brand-group {
-        justify-content: space-between;
+        justify-content: flex-start;
       }
       .header-controls {
-        justify-content: space-between;
-      }
-      .search-box input {
-        width: 100%;
+        justify-content: flex-end;
       }
       .hero-wrap {
-        padding: 2.5rem 1rem 1.5rem;
+        padding: 2.2rem 1rem 1.25rem;
       }
       .quick-meta-card {
         width: 100%;
         padding: 1.1rem;
-      }
-      .sticky-nav-bar {
-        top: 106px;
       }
       main {
         padding: 1.5rem 1rem 3rem;
@@ -783,27 +656,53 @@
         </a>
       </div>
 
-      <!-- Buscador y Selector de Idioma -->
+      <!-- Selector de Idioma con Banderas Circulares -->
       <div class="header-controls">
-        <div class="search-box">
-          <span class="search-icon">🔍</span>
-          <input type="text" id="guide-search" placeholder="Buscar en la guía técnica (ej. Faraday, Audio)..." oninput="filterGuideSections(this.value)" aria-label="Buscar en la guía técnica" data-i18n-placeholder="searchPlaceholder">
-        </div>
-
-        <button type="button" class="btn-lang-toggle" onclick="toggleLanguage()" aria-label="Cambiar idioma entre Español e Inglés">
-          <span id="lang-indicator">EN</span>
-          <svg class="lang-flag" viewBox="0 0 640 480" width="18" height="13.5">
-            <g fill-rule="evenodd">
-              <path fill="#bd3d44" d="M0 0h640v480H0z"/>
-              <path stroke="#fff" stroke-width="37" d="M0 55.4h640M0 129.2h640M0 203h640M0 277h640M0 350.8h640M0 424.6h640"/>
-              <path fill="#192f5d" d="M0 0h256v258.5H0z"/>
-              <g fill="#fff">
-                <circle cx="128" cy="129.2" r="75" fill="none" stroke="#fff" stroke-width="7"/>
-                <path d="M128 70l15 45h48l-39 28 15 45-39-28-39 28 15-45-39-28h48z"/>
+        <div class="lang-switch" role="group" aria-label="Language selector">
+          <!-- Bandera US (Inglés) -->
+          <button type="button" class="lang-btn" id="btn-lang-en" onclick="setLanguage('en')" title="English" aria-label="English">
+            <svg viewBox="0 0 32 32" width="26" height="26">
+              <clipPath id="ecg-flag-us"><circle cx="16" cy="16" r="16"/></clipPath>
+              <g clip-path="url(#ecg-flag-us)">
+                <rect width="32" height="32" fill="#b22234"/>
+                <path d="M0 4.92h32M0 9.85h32M0 14.77h32M0 19.69h32M0 24.62h32M0 29.54h32" stroke="#ffffff" stroke-width="2.46"/>
+                <rect width="14" height="17.23" fill="#3c3b6e"/>
+                <g fill="#ffffff">
+                  <circle cx="3" cy="3" r="0.9"/>
+                  <circle cx="7" cy="3" r="0.9"/>
+                  <circle cx="11" cy="3" r="0.9"/>
+                  <circle cx="5" cy="6" r="0.9"/>
+                  <circle cx="9" cy="6" r="0.9"/>
+                  <circle cx="3" cy="9" r="0.9"/>
+                  <circle cx="7" cy="9" r="0.9"/>
+                  <circle cx="11" cy="9" r="0.9"/>
+                  <circle cx="5" cy="12" r="0.9"/>
+                  <circle cx="9" cy="12" r="0.9"/>
+                  <circle cx="3" cy="15" r="0.9"/>
+                  <circle cx="7" cy="15" r="0.9"/>
+                  <circle cx="11" cy="15" r="0.9"/>
+                </g>
               </g>
-            </g>
-          </svg>
-        </button>
+            </svg>
+          </button>
+
+          <!-- Bandera España (Español) -->
+          <button type="button" class="lang-btn active" id="btn-lang-es" onclick="setLanguage('es')" title="Español" aria-label="Español">
+            <svg viewBox="0 0 32 32" width="26" height="26">
+              <clipPath id="ecg-flag-es"><circle cx="16" cy="16" r="16"/></clipPath>
+              <g clip-path="url(#ecg-flag-es)">
+                <rect width="32" height="32" fill="#aa151b"/>
+                <rect y="8" width="32" height="16" fill="#f1bf00"/>
+                <g transform="translate(6.5, 10.5) scale(0.68)">
+                  <path d="M4 1h8v6c0 3-4 5-4 5s-4-2-4-5V1z" fill="#aa151b" stroke="#f1bf00" stroke-width="0.8"/>
+                  <circle cx="8" cy="3" r="1.3" fill="#f1bf00"/>
+                  <rect x="2" y="2" width="1.2" height="9" fill="#94a3b8"/>
+                  <rect x="12.8" y="2" width="1.2" height="9" fill="#94a3b8"/>
+                </g>
+              </g>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   </header>
@@ -811,19 +710,8 @@
   <!-- Hero Principal -->
   <section class="hero-wrap">
     <div class="hero-badge" data-i18n="ecgHeroBadge">Ingeniería Biomédica &amp; Código Abierto</div>
-    <h1 class="hero-h1" data-i18n="ecgHeroTitle">Monitor Electrocardiograma en Tiempo Real (ECG) &amp; Procesamiento DSP en Python</h1>
-    <p class="hero-desc" data-i18n="ecgHeroSubtitle">Guía Exhaustiva de Construcción: Adquisición Analógica de Alta Fidelidad por Tarjeta de Audio, Electrodos Secos 3D, Blindaje EMI Multicapa y Filtrado Digital Adaptativo</p>
-    <div class="hero-actions-row">
-      <a href="#sec1" class="btn-action-primary" data-i18n="heroCtaRead">
-        📖 Leer Proyecto Completo ↓
-      </a>
-      <a href="https://www.youtube.com/watch?v=NcodDkrldqQ&t=8s" target="_blank" rel="noopener noreferrer" class="btn-action-secondary" data-i18n="heroCtaVideo">
-        ▶ Ver Video Demostrativo (YouTube) ↗
-      </a>
-      <a href="https://github.com/ambystomatechnologies/Real_Time_ECG_Monitor" target="_blank" rel="noopener noreferrer" class="btn-action-secondary" data-i18n="heroCtaGithub">
-        📂 Repositorio Oficial en GitHub ↗
-      </a>
-    </div>
+    <h1 class="hero-h1" data-i18n="ecgHeroTitle">Monitor Electrocardiograma en Tiempo Real (ECG) Módulo AD8232 Sparkfun &amp; Procesamiento DSP en Python</h1>
+    <p class="hero-desc" data-i18n="ecgHeroSubtitle">Guía de Construcción: Adquisición Analógica de Alta Fidelidad por Tarjeta de Audio, Electrodos Secos 3D, Blindaje EMI Multicapa y Filtrado Digital Adaptativo</p>
   </section>
 
   <!-- Quick Info Bar -->
@@ -835,35 +723,15 @@
     </div>
     <div style="display: flex; gap: 0.65rem; align-items: center; flex-wrap: wrap;">
       <span style="font-size: 0.85rem; color: #94a3b8; padding: 0.4rem 0.8rem; background: rgba(255,255,255,0.04); border-radius: 6px; border: 1px solid var(--card-border);" data-i18n="heroLicenseBadge">⚖️ Licencia GPL Open Source</span>
-      <span style="font-size: 0.85rem; color: #4ade80; padding: 0.4rem 0.8rem; background: rgba(34,197,94,0.1); border-radius: 6px; border: 1px solid rgba(34,197,94,0.3);" data-i18n="heroStatusBadge">✔ Validado en Tiempo Real</span>
     </div>
   </div>
-
-  <!-- Barra de Navegación Sticky para Saltar entre Secciones -->
-  <nav class="sticky-nav-bar" aria-label="Navegación de secciones">
-    <a href="#sec1" class="nav-pill-btn">§1. Introducción &amp; Tesis</a>
-    <a href="#sec2" class="nav-pill-btn">§2. Ruido Inicial</a>
-    <a href="#sec3" class="nav-pill-btn">§3. Fuentes EMI</a>
-    <a href="#sec4" class="nav-pill-btn">§4. Electrodos 3D</a>
-    <a href="#sec5" class="nav-pill-btn">§5. Filtros HW vs SW</a>
-    <a href="#sec6" class="nav-pill-btn">§6. Tarjeta Audio &amp; Python</a>
-    <a href="#sec7" class="nav-pill-btn">§7. Efecto Young (GIF)</a>
-    <a href="#sec8" class="nav-pill-btn">§8. Esquema Conexión</a>
-    <a href="#sec9" class="nav-pill-btn">§9. Configuración Audio</a>
-    <a href="#sec10" class="nav-pill-btn">§10. Firmware Arduino</a>
-    <a href="#sec11" class="nav-pill-btn">§11. Blindaje &amp; Video</a>
-    <a href="#sec12" class="nav-pill-btn">§12. PCB &amp; Descarga</a>
-  </nav>
 
   <!-- Contenido Principal con las 12 Secciones y 39 Imágenes -->
   <main>
 <!-- SECCIÓN 1: INTRODUCCIÓN Y REQUERIMIENTO CIENTÍFICO -->
         <section class="ecg-section-block" id="sec1">
           <div class="ecg-section-header-row">
-            <span class="ecg-step-number">SECCIÓN 01</span>
-            <div>
-              <h4 class="ecg-step-title-text" data-i18n="sec1Title">Planteamiento del Problema, Contexto Clínico y Ruido Eléctrico</h4>
-            </div>
+            <h4 class="ecg-step-title-text" data-i18n="sec1Title">Planteamiento del Problema, Contexto Clínico y Ruido Eléctrico</h4>
           </div>
           <p class="ecg-body-p" data-i18n="sec1P1">
             En el ámbito del registro electrofisiológico, la adquisición de biopotenciales cardíacos enfrenta desafíos críticos de relación señal-ruido (SNR). Tal como se define en la teoría electromagnética, el <em>ruido eléctrico</em> comprende todas aquellas señales de interferencia, de origen eléctrico o inductivo, no deseadas que se acoplan a la señal útil alterando su morfología y produciendo distorsiones que invalidan la lectura clínica.
@@ -883,10 +751,7 @@
         <!-- SECCIÓN 2: REGISTROS INICIALES Y CARACTERIZACIÓN DEL RUIDO -->
         <section class="ecg-section-block" id="sec2">
           <div class="ecg-section-header-row">
-            <span class="ecg-step-number">SECCIÓN 02</span>
-            <div>
-              <h4 class="ecg-step-title-text" data-i18n="sec2Title">Caracterización Experimental Inicial: Señal Cruda y Registros de Fábrica</h4>
-            </div>
+            <h4 class="ecg-step-title-text" data-i18n="sec2Title">Caracterización Experimental Inicial: Señal Cruda y Registros de Fábrica</h4>
           </div>
           <p class="ecg-body-p" data-i18n="sec2P1">
             Los primeros ensayos realizados con el hardware estándar arrojaron resultados insatisfactorios. La señal registrada consistía exclusivamente en ruido estocástico de alta amplitud sin ninguna morfología cardíaca distinguible:
@@ -951,10 +816,7 @@
         <!-- SECCIÓN 3: AISLAMIENTO SISTEMÁTICO DE FUENTES DE RUIDO -->
         <section class="ecg-section-block" id="sec3">
           <div class="ecg-section-header-row">
-            <span class="ecg-step-number">SECCIÓN 03</span>
-            <div>
-              <h4 class="ecg-step-title-text" data-i18n="sec3Title">Protocolo de Aislamiento y Caracterización de Fuentes de Interferencia Electromagnética</h4>
-            </div>
+            <h4 class="ecg-step-title-text" data-i18n="sec3Title">Protocolo de Aislamiento y Caracterización de Fuentes de Interferencia Electromagnética</h4>
           </div>
           <p class="ecg-body-p" data-i18n="sec3P1">
             Para depurar la señal, se diseñó un protocolo de aislamiento factorial para identificar el aporte individual de cada componente del entorno experimental. En primer término, se evaluó un escenario base de aislamiento electromagnético: estación portátil alimentada exclusivamente con batería interna, desconectada de la red eléctrica y apartada de equipos activos:
@@ -1038,10 +900,7 @@
         <!-- SECCIÓN 4: INNOVACIÓN EN ELECTRODOS Y TRIÁNGULO DE EINTHOVEN -->
         <section class="ecg-section-block" id="sec4">
           <div class="ecg-section-header-row">
-            <span class="ecg-step-number">SECCIÓN 04</span>
-            <div>
-              <h4 class="ecg-step-title-text" data-i18n="sec4Title">Innovación en Electrodos Secos: Pinzas Ergonómicas 3D y Triángulo de Einthoven</h4>
-            </div>
+            <h4 class="ecg-step-title-text" data-i18n="sec4Title">Innovación en Electrodos Secos: Pinzas Ergonómicas 3D y Triángulo de Einthoven</h4>
           </div>
           <p class="ecg-body-p" data-i18n="sec4P1">
             Los electrodos adhesivos de gel húmedo desechables (Ag/AgCl) suministrados comúnmente con los kits de desarrollo presentan severas desventajas prácticas: son de uso único, sufren desecación rápida que degrada la impedancia de contacto, dejan residuos en la piel y exigen la exposición precordial del torso del sujeto, lo cual resulta invasivo y poco ágil en entornos experimentales dinámicos:
@@ -1143,10 +1002,7 @@
         <!-- SECCIÓN 5: EVALUACIÓN DE ESTRATEGIAS DE FILTRADO -->
         <section class="ecg-section-block" id="sec5">
           <div class="ecg-section-header-row">
-            <span class="ecg-step-number">SECCIÓN 05</span>
-            <div>
-              <h4 class="ecg-step-title-text" data-i18n="sec5Title">Evaluación de Estrategias de Filtrado: Hardware Analógico vs. Software Digital</h4>
-            </div>
+            <h4 class="ecg-step-title-text" data-i18n="sec5Title">Evaluación de Estrategias de Filtrado: Hardware Analógico vs. Software Digital</h4>
           </div>
           <p class="ecg-body-p" data-i18n="sec5P1">
             La frecuencia fundamental del ruido de red comercial es de 50 Hz en Argentina y Europa, y de 60 Hz en Costa Rica y Norteamérica. En la literatura de ingeniería biomédica se describen diversas topologías de filtrado: pasa-bajos, FIR, filtros Butterworth de orden superior y promediado móvil. Inicialmente se exploró la implementación de filtros analógicos activos en hardware (etapas RC y operacionales adicionales):
@@ -1186,10 +1042,7 @@
         <!-- SECCIÓN 6: ARQUITECTURA DEFINITIVA EN PYTHON Y PUERTO DE AUDIO -->
         <section class="ecg-section-block" id="sec6">
           <div class="ecg-section-header-row">
-            <span class="ecg-step-number">SECCIÓN 06</span>
-            <div>
-              <h4 class="ecg-step-title-text" data-i18n="sec6Title">Arquitectura Definitiva: Captura por Tarjeta de Audio (Micrófono) &amp; DSP en Python</h4>
-            </div>
+            <h4 class="ecg-step-title-text" data-i18n="sec6Title">Arquitectura Definitiva: Captura por Tarjeta de Audio (Micrófono) &amp; DSP en Python</h4>
           </div>
           <p class="ecg-body-p" data-i18n="sec6P1">
             El avance determinante del proyecto consistió en comprender que los algoritmos de adquisición de audio de baja latencia a través de la tarjeta de sonido de la computadora eran óptimos para digitalizar la bioseñal cardíaca. Tanto una señal acústica analógica como la salida del sensor AD8232 son variaciones continuas de voltaje; la tarjeta de sonido del ordenador integra convertidores ADC de alta velocidad (44.1 kHz / 48 kHz), preamplificadores de bajo ruido y aislamiento natural del ruido del bus serie USB.
@@ -1223,10 +1076,7 @@
         <!-- SECCIÓN 7: EFECTO YOUNG DE ONDAS Y AUTOESCALA MULTIESPECIE -->
         <section class="ecg-section-block" id="sec7">
           <div class="ecg-section-header-row">
-            <span class="ecg-step-number">SECCIÓN 07</span>
-            <div>
-              <h4 class="ecg-step-title-text" data-i18n="sec7Title">Fundamento Físico: Superposición de Ondas (Efecto Young) &amp; Autoescala Multiespecie</h4>
-            </div>
+            <h4 class="ecg-step-title-text" data-i18n="sec7Title">Fundamento Físico: Superposición de Ondas (Efecto Young) &amp; Autoescala Multiespecie</h4>
           </div>
           <p class="ecg-body-p" data-i18n="sec7P1">
             Un hallazgo biofísico fundamental del proyecto fue comprobar que la frecuencia de ruido dominante a mitigar no se ubicaba en los 50 Hz teóricos de la red eléctrica, sino en <strong>35 Hz</strong>. Este fenómeno responde a las leyes de la física ondulatoria descritas en el <a href="https://es.wikipedia.org/wiki/Experimento_de_Young" target="_blank" rel="noopener noreferrer" class="ecg-link-inline">experimento de la doble ranura de Thomas Young ↗</a>:
@@ -1261,10 +1111,7 @@
         <!-- SECCIÓN 8: ESQUEMA ELÉCTRICO DE INTERCONEXIÓN -->
         <section class="ecg-section-block" id="sec8">
           <div class="ecg-section-header-row">
-            <span class="ecg-step-number">SECCIÓN 08</span>
-            <div>
-              <h4 class="ecg-step-title-text" data-i18n="sec8Title">Esquema Eléctrico de Interconexión y Montaje de Hardware</h4>
-            </div>
+            <h4 class="ecg-step-title-text" data-i18n="sec8Title">Esquema Eléctrico de Interconexión y Montaje de Hardware</h4>
           </div>
           <p class="ecg-body-p" data-i18n="sec8P1">
             A continuación se detalla el esquema de conexión maestro del sistema. El puerto analógico A0 del Arduino no se emplea para transmitir lecturas a la PC por USB; la bioseñal se toma directamente del pin <strong>OUTPUT</strong> del sensor AD8232 y se deriva a la entrada de micrófono (jack TRS 3.5 mm):
@@ -1296,10 +1143,7 @@
         <!-- SECCIÓN 9: CONFIGURACIÓN DE AUDIO EN EL SISTEMA OPERATIVO -->
         <section class="ecg-section-block" id="sec9">
           <div class="ecg-section-header-row">
-            <span class="ecg-step-number">SECCIÓN 09</span>
-            <div>
-              <h4 class="ecg-step-title-text" data-i18n="sec9Title">Configuración del Subsistema de Audio en el Sistema Operativo</h4>
-            </div>
+            <h4 class="ecg-step-title-text" data-i18n="sec9Title">Configuración del Subsistema de Audio en el Sistema Operativo</h4>
           </div>
           <p class="ecg-body-p" data-i18n="sec9P1">
             Para garantizar que el sistema operativo reconozca el conector de 3.5 mm como canal de entrada analógica de alta fidelidad, se accede al panel de configuración de sonido: clic derecho sobre el icono de audio de la barra de tareas de Windows &rarr; <em>Sonidos</em> &rarr; pestaña <em>Grabación</em>:
@@ -1335,10 +1179,7 @@
         <!-- SECCIÓN 10: FIRMWARE DE ARDUINO Y MODIFICACIÓN DE POLARIDAD -->
         <section class="ecg-section-block" id="sec10">
           <div class="ecg-section-header-row">
-            <span class="ecg-step-number">SECCIÓN 10</span>
-            <div>
-              <h4 class="ecg-step-title-text" data-i18n="sec10Title">Firmware del Microcontrolador Arduino &amp; Estandarización de Cableado</h4>
-            </div>
+            <h4 class="ecg-step-title-text" data-i18n="sec10Title">Firmware del Microcontrolador Arduino &amp; Estandarización de Cableado</h4>
           </div>
           <p class="ecg-body-p" data-i18n="sec10P1">
             El microcontrolador Arduino ejecuta un firmware básico de estabilización de niveles de entrada. Si bien la bioseñal primaria viaja por el jack analógico, este código permite mantener los potenciales de referencia estables y permite alternar con el Serial Plotter si se desea realizar mediciones de validación cruzada:
@@ -1374,24 +1215,25 @@
         <!-- SECCIÓN 11: PROTOCOLO DE MEDICIÓN, VIDEO Y BLINDAJE AVANZADO -->
         <section class="ecg-section-block" id="sec11">
           <div class="ecg-section-header-row">
-            <span class="ecg-step-number">SECCIÓN 11</span>
-            <div>
-              <h4 class="ecg-step-title-text" data-i18n="sec11Title">Protocolo de Medición, Demostración en Video y Blindaje Electromagnético Avanzado</h4>
-            </div>
+            <h4 class="ecg-step-title-text" data-i18n="sec11Title">Protocolo de Medición, Demostración en Video y Blindaje Electromagnético Avanzado</h4>
           </div>
           <p class="ecg-body-p" data-i18n="sec11P1">
             Con el hardware conectado y el conector de audio reconocido, se procede a ejecutar el software en Python compilado (~200 MB con todas las librerías científicas empaquetadas; la descompresión inicial toma aproximadamente 40 segundos). El sujeto debe mantenerse relajado e inmóvil para prevenir artefactos electromiográficos (EMG) generados por temblores musculares. En residencias sin conexión a tierra física, se recomienda operar la computadora con la batería interna:
           </p>
 
-          <div class="ecg-figures-row single-col">
-            <div class="ecg-fig-item" onclick="openLightbox(this)">
-              <div class="ecg-fig-media-wrap contain-mode">
-                <img src="media/image30.png" alt="Video demostrativo comparando señal cruda y señal filtrada con Python">
-              <span class="ecg-fig-zoom-badge">🔍 Zoom</span></div>
-              <div class="ecg-fig-text">
-                <strong data-i18n="fig30CaptionTitle">Fig. 30: Video Demostrativo Comparativo en Tiempo Real</strong>
-                <span data-i18n="fig30CaptionDesc">Comparativa lado a lado entre el Serial Plotter de Arduino sin filtros y la señal filtrada con el software en Python. <a href="https://www.youtube.com/watch?v=NcodDkrldqQ&t=8s" target="_blank" rel="noopener noreferrer" class="ecg-link-inline">Ver demostración en YouTube (8 min) ↗</a>.</span>
-              </div>
+          <div class="ecg-video-embed-box" style="margin: 1.5rem 0 1.25rem;">
+            <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 0.85rem; border: 1px solid var(--card-border); background: #000; box-shadow: 0 12px 36px rgba(0,0,0,0.55);">
+              <iframe 
+                src="https://www.youtube-nocookie.com/embed/NcodDkrldqQ?start=8" 
+                title="Demostración Experimental ECG en Tiempo Real" 
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div class="ecg-fig-text" style="padding: 0.75rem 0.25rem 0;">
+              <strong data-i18n="fig30CaptionTitle">Fig. 30: Video Demostrativo Comparativo en Tiempo Real</strong>
+              <span data-i18n="fig30CaptionDesc">Demostración en video: Comparativa lado a lado entre el Serial Plotter de Arduino sin filtros y la señal filtrada con el software en Python. Reproducible directamente aquí.</span>
             </div>
           </div>
 
@@ -1462,10 +1304,7 @@
         <!-- SECCIÓN 12: FABRICACIÓN DE PCB EN BAQUELITA, DESCARGA Y CRÉDITOS -->
         <section class="ecg-section-block" id="sec12">
           <div class="ecg-section-header-row">
-            <span class="ecg-step-number">SECCIÓN 12</span>
-            <div>
-              <h4 class="ecg-step-title-text" data-i18n="sec12Title">Fabricación de Circuito Impreso (PCB) en Baquelita, Repositorio &amp; Créditos</h4>
-            </div>
+            <h4 class="ecg-step-title-text" data-i18n="sec12Title">Fabricación de Circuito Impreso (PCB) en Baquelita, Repositorio &amp; Créditos</h4>
           </div>
           <p class="ecg-body-p" data-i18n="sec12P1">
             Para conferir máxima confiabilidad mecánica al instrumento y eliminar cables sueltos en protoboard, se diseñó un circuito impreso (PCB de simple faz en baquelita) optimizado para el Arduino Nano y el módulo AD8232:
@@ -1578,7 +1417,7 @@
               <a href="https://github.com/BrandonAntonioSeguraTorres/Real-Time-ECG-Monitor-PyQt5-PyAudio-/releases/tag/ecg_monitor" target="_blank" rel="noopener noreferrer" class="btn-play-store" style="padding: 0.65rem 1.25rem; font-size: 0.88rem; width: auto;">
                 <span data-i18n="sec12BottomGhBtn">📥 Descargar Release en GitHub ↗</span>
               </a>
-              <a href="https://www.youtube.com/watch?v=NcodDkrldqQ&t=8s" target="_blank" rel="noopener noreferrer" class="btn-hero-secondary" style="padding: 0.65rem 1.15rem; font-size: 0.88rem;">
+              <a href="#sec11" class="btn-hero-secondary" style="padding: 0.65rem 1.15rem; font-size: 0.88rem;">
                 <span data-i18n="ecgWatchYoutubeBtn">▶ Ver Demostración en Video</span>
               </a>
             </div>
@@ -1706,7 +1545,7 @@
       "fig23CaptionTitle": "Fig. 23: Interferencia Constructiva y Destructiva de Ondas (Efecto Young)",
       "sec9TipTitle": "💡 Recomendación Práctica sobre Conectores TRS 3.5 mm:",
       "fig27CaptionDesc": "Conexión del jack TRS con el Arduino apagado; el sistema conmuta automáticamente al micrófono de entrada externa.",
-      "fig30CaptionDesc": "Comparativa lado a lado entre el Serial Plotter de Arduino sin filtros y la señal filtrada con el software en Python. <a class=\"ecg-link-inline\" href=\"https://www.youtube.com/watch?v=NcodDkrldqQ&amp;t=8s\" rel=\"noopener noreferrer\" target=\"_blank\">Ver demostración en YouTube (8 min) ↗</a>.",
+      "fig30CaptionDesc": "Demostración en video: Comparativa lado a lado entre el Serial Plotter de Arduino sin filtros y la señal filtrada con el software en Python. Reproducible directamente aquí.",
       "sec12P1": "Para conferir máxima confiabilidad mecánica al instrumento y eliminar cables sueltos en protoboard, se diseñó un circuito impreso (PCB de simple faz en baquelita) optimizado para el Arduino Nano y el módulo AD8232:",
       "fig35CaptionTitle": "Fig. 35: Gabinete de Aislamiento y Carcasa Protectora en 3D",
       "sec5AlertItem3": "<strong>Librerías de Sobremuestreo en Arduino:</strong> El ancho de banda del convertidor analógico-digital (ADC) interno del microcontrolador ATmega328P resultaba insuficiente para sostener simultáneamente el muestreo continuo y el filtrado digital en tiempo real.",
@@ -1746,7 +1585,7 @@
       "fig23CaptionDesc": "Al coincidir múltiples frentes de onda electromagnéticos en el ambiente, se producen cancelaciones y sumatorias de fase que desplazan la frecuencia dominante de interferencia a 35 Hz.",
       "fig29CaptionTitle": "Fig. 29: Corrección de Polaridad y Código de Color",
       "ecgSecSpecs": "ESPECIFICACIONES TÉCNICAS CONSOLIDADAS",
-      "ecgWatchYoutubeBtn": "▶ Ver Demostración en Video (YouTube) ↗",
+      "ecgWatchYoutubeBtn": "▶ Ver Demostración en Video",
       "spec1Label": "Front-End Analógico (AFE)",
       "spec1Val": "Analog Devices AD8232 (SparkFun Heart Rate Monitor) con filtros activos pasa-altos de 2 polos y pasa-bajos de 3 polos",
       "spec2Label": "Controlador de Referencia",
@@ -1767,18 +1606,13 @@
       "spec9Val": "Cable de audio coaxial blindado, Jaula de Faraday de malla metálica conectada a masa y barrera secundaria reflectora de RF",
       "spec10Label": "Licencia de Software",
       "spec10Val": "Código y diseño abierto bajo Licencia Pública General de GNU (GPL)",
-      "docTitle": "Monitor Electrocardiograma en Tiempo Real (ECG) · Guía Técnica Completa · Ambystoma Technologies",
+      "docTitle": "Monitor Electrocardiograma en Tiempo Real (ECG) Módulo AD8232 Sparkfun · Guía Técnica Completa · Ambystoma Technologies",
       "headerLogoSub": "Ingeniería Biomédica & Ciencia Abierta",
       "backToPortal": "← Portal Ambystoma Technologies",
-      "searchPlaceholder": "Buscar en la guía técnica (ej. Faraday, Audio, STL)...",
       "ecgHeroBadge": "Ingeniería Biomédica & Código Abierto",
-      "ecgHeroTitle": "Monitor Electrocardiograma en Tiempo Real (ECG) & Procesamiento DSP en Python",
-      "ecgHeroSubtitle": "Guía Exhaustiva de Construcción: Adquisición Analógica de Alta Fidelidad por Tarjeta de Audio, Electrodos Secos 3D, Blindaje EMI Multicapa y Filtrado Digital Adaptativo",
-      "heroCtaRead": "📖 Leer Proyecto Completo ↓",
-      "heroCtaVideo": "▶ Ver Video Demostrativo (YouTube) ↗",
-      "heroCtaGithub": "📂 Repositorio Oficial en GitHub ↗",
+      "ecgHeroTitle": "Monitor Electrocardiograma en Tiempo Real (ECG) Módulo AD8232 Sparkfun & Procesamiento DSP en Python",
+      "ecgHeroSubtitle": "Guía de Construcción: Adquisición Analógica de Alta Fidelidad por Tarjeta de Audio, Electrodos Secos 3D, Blindaje EMI Multicapa y Filtrado Digital Adaptativo",
       "heroLicenseBadge": "⚖️ Licencia GPL Open Source",
-      "heroStatusBadge": "✔ Validado en Tiempo Real",
       "ecgAuthorsDept": "Ciencias Biológicas · Ambystoma Technologies",
       "ecgAuthorsLabel": "INVESTIGADORES Y DESARROLLADORES",
       "lightboxHint": "Haga clic en cualquier lugar o presione Esc para cerrar",
@@ -1897,7 +1731,7 @@
       "sec11Title": "Measurement Protocol, Video Demonstration & Advanced EMI Shielding",
       "sec11P1": "With hardware connected and the audio port recognized, launch the standalone Python executable (~200 MB packaged executable; initial decompression takes ~40 seconds). The subject must remain relaxed and still to prevent electromyographic (EMG) muscle artifacts. In locations lacking dedicated physical earth ground, operate the laptop on internal battery power:",
       "fig30CaptionTitle": "Fig. 30: Real-Time Comparative Demonstration Video",
-      "fig30CaptionDesc": "Side-by-side comparison between raw Arduino Serial Plotter and filtered Python DSP software. <a href=\"https://www.youtube.com/watch?v=NcodDkrldqQ&t=8s\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"ecg-link-inline\">Watch YouTube Demonstration (8 min) ↗</a>.",
+      "fig30CaptionDesc": "Video demonstration: Side-by-side comparison between raw Arduino Serial Plotter and filtered Python DSP software. Reproducible directly here.",
       "sec11P2": "To achieve maximum electromagnetic immunity in lab environments crowded with RF noise, four tiers of physical shielding were integrated:",
       "fig31CaptionTitle": "Fig. 31: Balanced Shielded Coaxial Audio Cable",
       "fig31CaptionDesc": "Braided metallic outer shielding that drains induced electromagnetic noise along the transmission line.",
@@ -1923,7 +1757,7 @@
       "sec12GhDesc": "Completely free and open-source software under the GNU General Public License (GPL).",
       "sec12P2": "Hardware and software development conducted by Brandon Antonio Segura Torres and Priscilla Vieto Bonilla.",
       "ecgSecSpecs": "CONSOLIDATED TECHNICAL SPECIFICATIONS",
-      "ecgWatchYoutubeBtn": "▶ Watch Video Demonstration (YouTube) ↗",
+      "ecgWatchYoutubeBtn": "▶ Watch Video Demonstration",
       "spec1Label": "Analog Front-End (AFE)",
       "spec1Val": "Analog Devices AD8232 (SparkFun Heart Rate Monitor) with integrated 2-pole high-pass and 3-pole low-pass active filters",
       "spec2Label": "Reference Controller",
@@ -1944,46 +1778,35 @@
       "spec9Val": "Shielded coaxial audio cable, grounded wire-mesh Faraday cage, and secondary RF reflective barrier",
       "spec10Label": "Software License",
       "spec10Val": "Free and open-source design under GNU General Public License (GPL)",
-      "docTitle": "Real-Time ECG Electrocardiogram Monitor · Complete Technical Guide · Ambystoma Technologies",
+      "docTitle": "Real-Time Electrocardiogram (ECG) Monitor Sparkfun AD8232 Module · Complete Technical Guide · Ambystoma Technologies",
       "headerLogoSub": "Biomedical Engineering & Open Science",
       "backToPortal": "← Ambystoma Technologies Portal",
-      "searchPlaceholder": "Search technical guide (e.g., Faraday, Audio, STL)...",
       "ecgHeroBadge": "Biomedical Engineering & Open Source",
-      "ecgHeroTitle": "Real-Time Electrocardiogram (ECG) Monitor & Python DSP Processing",
-      "ecgHeroSubtitle": "Comprehensive Construction Guide: High-Fidelity Soundcard Analog Acquisition, 3D Dry Electrodes, Multilayer EMI Shielding & Adaptive Digital Filtering",
-      "heroCtaRead": "📖 Read Full Project ↓",
-      "heroCtaVideo": "▶ Watch Video Demo (YouTube) ↗",
-      "heroCtaGithub": "📂 Official GitHub Repository ↗",
+      "ecgHeroTitle": "Real-Time Electrocardiogram (ECG) Monitor Sparkfun AD8232 Module & Python DSP Processing",
+      "ecgHeroSubtitle": "Construction Guide: High-Fidelity Soundcard Analog Acquisition, 3D Dry Electrodes, Multilayer EMI Shielding & Adaptive Digital Filtering",
       "heroLicenseBadge": "⚖️ GPL Open Source License",
-      "heroStatusBadge": "✔ Real-Time Clinically Validated",
       "ecgAuthorsDept": "Biological Sciences · Ambystoma Technologies",
       "ecgAuthorsLabel": "RESEARCHERS & DEVELOPERS",
       "lightboxHint": "Click anywhere or press Esc to close",
       "footerLegal": "© 2026 Ambystoma Technologies · Deep Tech & Scientific Solutions",
       "sec12GhBtn": "📥 Download Official Software (GitHub Releases v_ecg_monitor) ↗",
       "sec12BottomGhBtn": "📥 Download Release on GitHub ↗"
-}
-    };
+    }
+  };
 
     let currentLang = 'es';
 
     function setLanguage(lang) {
+      if (!I18N[lang]) lang = 'es';
       currentLang = lang;
-      const dict = I18N[lang] || I18N.es;
+      const dict = I18N[lang];
+      document.documentElement.lang = lang;
 
       // Update text nodes with data-i18n
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        if (dict[key]) {
+        if (dict[key] !== undefined) {
           el.innerHTML = dict[key];
-        }
-      });
-
-      // Update placeholders
-      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-        const key = el.getAttribute('data-i18n-placeholder');
-        if (dict[key]) {
-          el.placeholder = dict[key];
         }
       });
 
@@ -1992,17 +1815,15 @@
         document.title = dict.docTitle;
       }
 
-      // Update toggle indicator & flag
-      const ind = document.getElementById('lang-indicator');
-      if (ind) {
-        ind.textContent = lang === 'es' ? 'EN' : 'ES';
+      // Update active state on circular flag buttons
+      const btnEn = document.getElementById('btn-lang-en');
+      const btnEs = document.getElementById('btn-lang-es');
+      if (btnEn && btnEs) {
+        btnEn.classList.toggle('active', lang === 'en');
+        btnEs.classList.toggle('active', lang === 'es');
       }
 
       localStorage.setItem('ambystoma_lang', lang);
-    }
-
-    function toggleLanguage() {
-      setLanguage(currentLang === 'es' ? 'en' : 'es');
     }
 
     // Lightbox modal logic
@@ -2048,26 +1869,6 @@
         closeLightboxForce();
       }
     });
-
-    // Search filter across sections
-    function filterGuideSections(query) {
-      const q = query.trim().toLowerCase();
-      const sections = document.querySelectorAll('.ecg-section-block');
-
-      if (!q) {
-        sections.forEach(sec => sec.style.display = '');
-        return;
-      }
-
-      sections.forEach(sec => {
-        const text = sec.textContent.toLowerCase();
-        if (text.includes(q)) {
-          sec.style.display = '';
-        } else {
-          sec.style.display = 'none';
-        }
-      });
-    }
 
     // Init language from storage
     document.addEventListener('DOMContentLoaded', () => {

@@ -1,4 +1,4 @@
-# 🫀 Monitor Electrocardiograma en Tiempo Real (ECG) & Procesamiento DSP en Python
+# 🫀 Monitor Electrocardiograma en Tiempo Real (ECG) Módulo AD8232 Sparkfun & Procesamiento DSP en Python
 ## Ambystoma Technologies · Deep Tech & Scientific Solutions
 
 Plataforma de telemetría electrofisiológica no invasiva y guía de ingeniería de código abierto desarrollada para la investigación cardiológica, detección de paros cardíacos y estudio de biopotenciales en tiempo real.
